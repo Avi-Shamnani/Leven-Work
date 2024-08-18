@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="Services.css">
+</head>
+
+<body>
+
+    <div class="main-container">
+
+        <div class="top-container">
+
+            <div class="left-section">
+                <h1 style="font-size: 65px; font-weight: bold;"> Our <br> Services </h1>
+            </div>
+
+            <div class="right-section">
+
+                <div class="curved-shape">
+                    Welcome to our full-service digital agency, where creativity meets technology to drive
+                    your business forward. We specialize in a comprehensive range of services designed to
+                    elevate your brand in the digital landscape. From Digital Marketing strategies like SEO,
+                    PPC, and Social Media Marketing that increase your online visibility, to Creative Services
+                    including Graphic Design, Logo Design, and Video Production that breathe life into your
+                    brand identity. Our Web Development expertise ensures your online presence is not only
+                    aesthetically pleasing but also functional, with offerings like Website Design, E-commerce
+                    Solutions, and Web Analytics. Additionally, our Content Creation team crafts compelling
+                    narratives through Blog Writing, Copywriting, and Video Scriptwriting, ensuring your message
+                    resonates across all platforms. Partner with us to transform your ideas into impactful digital
+                    experiences.
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- -------------------------------------------------------------------------------------------------- -->
+
+        <div class="bottom-container">
+
+            <div class="bottom-section-1">
+
+                <div class="bs1-left b-image" data-hover-text="Digital Marketing"> <!-- This is the hover text-->
+                    <!-- <span class="hover-text">Digital Marketing </span>  -->
+
+                    <img src="images/image1.png" alt="Image 1" class="fixed-size-image">
+                    <img src="images/image11.webp" alt="Image 2" class="fixed-size-image" style="display: none;">
+                    <img src="images/image12.jpg" alt="Image 3" class="fixed-size-image" style="display: none;">
+                    <img src="images/image13.webp" alt="Image 4" class="fixed-size-image" style="display: none;">
+                    <img src="images/image14.webp" alt="Image 5" class="fixed-size-image" style="display: none;">
+                    <!-- Add more images as needed -->
+                </div>
+
+                <div class="bs1-right b-text" id="hover-content">
+                    <!-- text content for section 1 -->
+                    <h2>Digital Marketing :</h2> <br>
+
+                    <pre>
+                    - SEO (Search Engine Optimization) <br>
+                    - PPC (Pay-Per-Click) Advertising <br>
+                    - Social Media Marketing <br>
+                    - Email Marketing <br>
+                    - Content Marketing
+                    </pre>
+                </div>
+            </div>
+
+            <div class="bottom-section-2">
+                <div class="bs2-left b-text" id="hover-content" className="mt-96">
+                    <!-- text content for section 2 -->
+                    <h2>Creative Services :</h2> <br>
+
+                    <pre>
+                    - Graphic Design  <br>
+                    - Logo Design <br>
+                    - Branding <br>
+                    - Video Production <br>
+                    - Photography               
+                </pre>
+                </div>
+
+                <div class="bs2-right b-image" data-hover-text="Creative Services"> <!-- This is the hover text-->
+
+                    <img src="images/image2.avif" alt="Image 2" class="fixed-size-image">
+                    <img src="images/iamge21.webp" alt="Image 2" class="fixed-size-image" style="display: none;">
+                    <img src="images/image22.jpg" alt="Image 3" class="fixed-size-image" style="display: none;">
+                    <img src="images/image23.jpg" alt="Image 4" class="fixed-size-image" style="display: none;">
+                    <img src="images/image24.jpg" alt="Image 5" class="fixed-size-image" style="display: none;">
+                </div>
+            </div>
+
+            <div class="bottom-section-3">
+
+                <div class="bs3-left b-image" data-hover-text="Web Development"> <!-- This is the hover text-->
+
+                    <img src="images/image3.png" alt="Image 3" class="fixed-size-image">
+                    <img src="images/image31.png" alt="Image 2" class="fixed-size-image" style="display: none;">
+                    <img src="images/image32.png" alt="Image 3" class="fixed-size-image" style="display: none;">
+                    <!-- <img src="images/image23.jpg" alt="Image 4" class="fixed-size-image" style="display: none;">
+                    <img src="images/image24.jpg" alt="Image 5" class="fixed-size-image" style="display: none;">  -->
+                </div>
+
+                <div class="bs3-right b-text" id="hover-content">
+                    <!-- text content for section 3 -->
+                    <h2>Web Development :</h2> <br>
+
+                    <pre>
+                    - Website Design <br>
+                    - Website Development <br>
+                    - E-commerce Solutions <br>
+                    - Web Maintenance <br>
+                    - Web Analytics                
+                 </pre>
+                </div>
+            </div>
+
+            <div class="bottom-section-4">
+
+                <div class="bs4-left b-text" id="hover-content">
+                    <!-- text content for section 4 -->
+                    <h2>Content Creation :</h2> <br>
+
+                    <pre>
+                    - Blog Writing <br>
+                    - Copywriting <br>  
+                    - Video Scriptwriting <br>
+                    - Social Media Content Creation  <br>             
+                    - Podcasting
+                </pre>
+                </div>
+
+                <div class="bs1-right b-image" data-hover-text="Content Creation"> <!-- This is the hover text-->
+
+                    <img src="images/image4.png" alt="Image 4" class="fixed-size-image">
+                    <img src="images/image41.png" alt="Image 2" class="fixed-size-image" style="display: none;">
+                    <img src="images/image42.png" alt="Image 3" class="fixed-size-image" style="display: none;">
+                    <!-- <img src="images/image23.jpg" alt="Image 4" class="fixed-size-image" style="display: none;">
+                    <img src="images/image24.jpg" alt="Image 5" class="fixed-size-image" style="display: none;">  -->
+                </div>
+
+            </div>
+
+            <!-- ---------------------------------------------------------------------------------------------------- -->
+
+        </div> <!-- closing of bottom container -->
+
+    </div> <!-- closing of main container    -->
+
+    <script>
+        // Get all image containers
+        var imageContainers = document.querySelectorAll('.b-image');
+        var intervalId = null; // Declare intervalId here
+
+        // Loop through all image containers
+        imageContainers.forEach(function (imageContainer) {
+            var images = imageContainer.querySelectorAll('img');
+            var currentIndex = 0;
+
+            // Function to switch to the next image
+            function nextImage() {
+                // Hide all images
+                images.forEach(function (img) {
+                    img.style.display = 'none';
+                });
+
+                // Show the next image
+                images[currentIndex].style.display = 'block';
+
+                // Increment the current index
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            // Add event listener for hover
+            imageContainer.addEventListener('mouseover', function () {
+                // Clear the interval
+                clearInterval(intervalId);
+
+                // Start the interval
+                intervalId = setInterval(nextImage, 2500);
+            });
+
+            // Add event listener for mouseout
+            imageContainer.addEventListener('mouseout', function () {
+                // Clear the interval
+                clearInterval(intervalId);
+            });
+
+            // Initialize the first image as visible
+            images[0].style.display = 'block';
+        });
+    </script>
+</body>
+
+</html>
