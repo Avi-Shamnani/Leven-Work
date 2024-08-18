@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Layout from '../../components/Layout';
+
+import Footer from '../../components/Footer';
 import './Services.css'; // Import your CSS file
 
 // Define the Home component
@@ -43,7 +45,7 @@ function Home() {
   }, []);
 
   // Render the Home component
-  return (
+  return (<>
     <Layout>
       <div className="main-container mt-10">
 
@@ -148,6 +150,8 @@ function Home() {
         </div>
       </div>
     </Layout>
+    <Footer></Footer>
+    </>
   );
 }
 

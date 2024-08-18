@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../../components/Layout'
+import Footer from '../../components/Footer';
 import Teamlayout from '../../components/Teamlayout';
 function Team() {
   return (
@@ -18,6 +19,7 @@ function Team() {
         </div>
       </div>
       <Teamlayout></Teamlayout>
+      <Footer></Footer>
       </Layout>
   )
 }
