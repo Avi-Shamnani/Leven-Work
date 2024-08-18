@@ -6,8 +6,10 @@ module.exports = {
   theme: {
     extend: {
       colors:{
-        "primary" : "#112B3C",
-        "secondary" : "#F66B0E"
+        "primary" : "#fff",
+        "secondary" : "#00012b",
+        "backcolor" : "#141212",
+        "specialColor": "#ff0ff2"
       },
       fontFamily: {
         playfair: ['"Playfair Display"', 'serif'],

@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins" ,sans-serif;
+}
+
+.main-container {
+    width: 100%;    
+    display: flex;
+    flex-direction: column;
+  }
+
+  .curved-shape {     /* this is the elliptical shape at top right container.... */
+    background-color: rgb(254, 254, 20);
+    padding: 100px;
+    clip-path: ellipse(50% 50%); /* creates an elliptical shape */
+  }
+  
+  .top-container {
+    width: 100%;
+    display: flex;
+    flex-direction: flex;
+  }
+  
+  .left-section  {
+    width: 25%;
+    padding: 120px;
+    margin: 50px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .right-section {
+    width: 75%;
+    padding: 30px;
+    margin: 10px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+
+  /* ---------------------------------------------------------------------------------------------- */
+  
+  .bottom-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;  /* These padding and margin is imp ....*/
+    margin: 50px;
+    margin-top: 0px;
+  }
+  
+  .bottom-section-1, .bottom-section-2, .bottom-section-3, .bottom-section-4 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .bs1-left, .bs1-right, .bs2-left, .bs2-right, .bs3-left, .bs3-right, .bs4-left, .bs4-right {
+    width: 50%;
+    height: 90%;
+    padding: 30px;
+  }
+  
+  
+  .b-image {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+/* ----------------------------------------------------------------------------------------------------------- */
+
+  .b-image img {
+    position: absolute;
+    border-radius: 20%;
+    border: 1px;
+    transition: opacity 0.5s; /* Add a smooth transition effect */
+  }
+
+/* ------------------------------------------------------------------------------------------------------------------------ */
+
+  .fixed-size-image {
+    width: 400px; /* Fixes the width to 300 pixels */
+    height: 300px; /* Fixes the height to 200 pixels */
+}
+  
+  .b-image img {
+    object-fit: cover;
+  }
+  
+  .b-text, .b-text {
+    background-color: #fff;
+    padding: 20px;
+    margin: 10px;
+  }
+
+  /* -------------------- image hover-text-------------------------------- */
+
+  .b-image {
+    display: inline-block; /* add this to make each image a block */
+  }
+  
+  .b-image::before {
+    content: attr(data-hover-text);
+    display: none;
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: #151111;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    color: #f5f3f3;
+    font-size: 16px;
+    font-weight: bold;
+    z-index: 1;
+  }
+  
+  .b-image:hover::before {
+    display: block;
+  }
+  
+  .b-image img {
+    pointer-events: none;
+  }
+
+  /* --------------------------------------------------------------------- */
+
+  /*--------------------hover content------------------------------------- */
+
+  #hover-content pre {
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(0);
+  }
+  
+  #hover-content pre:hover {
+    transform: translateY(-10px);
+  }

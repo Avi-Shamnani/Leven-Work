@@ -19,7 +19,7 @@ function Layout({ children }) {
       icon: "ri-service-line",
     },
     {
-      title: "Contact",
+      title: "Contact Us",
       path: "/contact",
       icon: "ri-user-star-fill",
     },
@@ -41,37 +41,35 @@ function Layout({ children }) {
   ];
   return (
     <div>
-      {/* Main Content */}
-      <div className="">{children}</div>
 
       {/* The navigation bar is constant in our site */}
-      <div className="fixed bottom-10 left-0 right-0 w-full">
-        <div className="flex w-full justify-center">
+      <div className="fixed bg-secondary h-20 w-full z-50">
+        <div className="flex w-full justify-end">
           {navItem.map((item, index) => (
             <div className="flex flex-col justify-end">
               {/* Showing upper cloud link structure and icon */}
               {location.pathname === item.path && (
                 <div className="flex flex-col items-center">
-                  <div className="h-5 w-10 bg-primary rounded-t-full"></div>
-                  <div className="h-5 w-20 bg-primary rounded-t-full text-center">
-                    <i className={`${item.icon} text-white text-xl`}></i>
+                  <div className="h-5 w-10 text-primary rounded-t-full"></div>
+                  <div className="h-5 w-20 rounded-t-full text-center">
+                    <i className={`${item.icon} text-primary text-xl`}></i>
                   </div>
                 </div>
               )}
               {/* Here we just want the rounded corners for the edge case so if index === 0 then do round just left side
             and similarly if we are at the last index then we want the rounded corner at right*/}
               <div
-                className={`px-12 bg-primary text-secondary py-2.5 text-xl ${
+                className={`px-7 text-primary py-2.5 text-xl ${
                   index === 0 && "rounded-l"
                 } 
-            ${
-              index === navItem.length - 1 && "rounded-r"
-            } flex items-center justify-center space-x-2`}
+                ${
+                  index === navItem.length - 1 && "rounded-r"
+                } flex items-center justify-center space-x-2`}
               >
 
                 {/* If the current route is not active then only icon will be shown in the nav bar */}
                 {location.pathname !== item.path && (
-                  <i className={`${item.icon} text-secondary text-xl`}></i>
+                  <i className={`${item.icon} text-primary text-xl`}></i>
                 )}
                 <Link to={`${item.path}`}>{item.title}</Link>
               </div>
@@ -79,6 +77,8 @@ function Layout({ children }) {
           ))}
         </div>
       </div>
+      {/* Main Content */}
+      <div className="pt-16">{children}</div>
     </div>
   );
 }
