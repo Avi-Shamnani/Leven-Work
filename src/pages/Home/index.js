@@ -44,7 +44,7 @@ function Home() {
         delete intervalIds[section];
       });
     });
-  
+    
     return () => {
       Object.values(intervalIds).forEach((intervalId) => clearInterval(intervalId));
     };
@@ -53,7 +53,8 @@ function Home() {
   // Render the Home component
   return (<>
     <Layout>
-      <div className="main-container mt-10">
+    </Layout>
+      <div className="main-container mt-10 mb-[700px]">
 
         <div className="top-container">
           <div className="left-section">
@@ -150,14 +151,8 @@ function Home() {
             </div>
           </div>
         </div>
-
-        <div className='footer'>
-
-        </div>
-
-        
       </div>
-    </Layout>
+
     <Footer></Footer>
     </>
   );

@@ -26,7 +26,8 @@
   
   .left-section  {
     width: 25%;
-    padding: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
     margin: 40px;
     align-items: center;
     justify-content: center;
@@ -34,7 +35,8 @@
 
   .right-section {
     width: 75%;
-    padding: 100px;
+    padding-left: 100px;
+    padding-right: 100px;
     margin: 5px;
     align-items: center;
     justify-content: center;
@@ -47,7 +49,8 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 60px;  /* These padding and margin is imp ....*/
+    padding-left: 60px;  /* These padding and margin is imp ....*/
+    padding-right: 60px;  /* These padding and margin is imp ....*/
     /* margin: 50px; */
     /* margin-top: 0px; */
   }

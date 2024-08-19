@@ -10,7 +10,8 @@ import Footer from '../../components/Footer'
 function Clients() {
   return (
     <div className='clients-page'>
-    <Layout><div>Clients</div></Layout>
+    <Layout><div>Clients</div>
+    </Layout>
     <Footer></Footer>
     </div>
   )
