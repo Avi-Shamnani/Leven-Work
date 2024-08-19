@@ -1,5 +1,6 @@
 import React from 'react';
 import './footer1.css'; // Import the CSS file
+import logo from './Colorful_Abstract_Infinity_Technology_Free_Logo-removebg-preview.png'
 
 function Footer() {
   return (
@@ -8,7 +9,7 @@ function Footer() {
         <div className="left-col">
           <div className="logo">
             <img 
-              src="Colorful_Abstract_Infinity_Technology_Free_Logo-removebg-preview.png" 
+              src={logo}
               alt="Company Logo" 
             />
             <h2>Leven Work</h2>

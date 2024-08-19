@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Layout from "../../components/Layout";
-
+import Footer from "../../components/Footer";
 // This is to navigate to the home route rather than the index.html
 import { useNavigate } from "react-router-dom";
 
@@ -69,7 +69,7 @@ function Contact() {
     setPhone(phoneNumber);
   };
 
-  return (
+  return (<>
     <Layout>
        
       <div className="contact-page">
@@ -78,7 +78,9 @@ function Contact() {
           <span className="close-btn" onClick={closeForm}>
             ×
           </span>
-          <form action="#" className="form">
+
+          {/* Adding the method post and handling the form in create route */}
+          <form action="/addUser" method="post" className="form">
             {/* Full Name */}
             <div className="input-box">
               <label htmlFor="Name">Full Name</label>
@@ -190,6 +192,8 @@ function Contact() {
         </section>
       </div>
     </Layout>
+      <Footer></Footer>
+      </>
   );
 }
 

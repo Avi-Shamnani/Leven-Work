@@ -49,12 +49,12 @@ function Teamlayout() {
    const [activeSlide, setActiveSlide] = React.useState(0);
 
   return (
-    <div className='mt-20 ml-24 mr-16 bg-backcolor '>
+    <div className='mt-20 mb-20 ml-24 mr-16 bg-gray-500 '>
       <Slider {...settings}>
     {teamData.map((member, index) => 
     <div 
     key={member.name} 
-    className={`team-card border-2 border-primary mx-2 ${
+    className={`team-card border-2 border-primary mx-2 my-10 ${
       index === activeSlide ? 'scale-100' : 'scale-75'
     } transition-transform duration-300`}
   >
