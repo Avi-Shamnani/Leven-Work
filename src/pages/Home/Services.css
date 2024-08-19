@@ -6,14 +6,19 @@
     font-family: "poppins" ,sans-serif;
 }
 
+.blue{
+  color: hsl(239, 88%, 56%);
+}
+
 .main-container {
     width: 100%;    
     display: flex;
     flex-direction: column;
+    color: #ffff;
   }
 
   .curved-shape {     /* this is the elliptical shape at top right container.... */
-    background-color: rgb(254, 254, 20);
+    background-color: rgb(57, 55, 58);
     padding: 100px;
     clip-path: ellipse(50% 50%); /* creates an elliptical shape */
   }
@@ -26,21 +31,20 @@
   
   .left-section  {
     width: 25%;
-    padding: 120px;
-    margin: 50px;
+    padding: 100px;
+    margin: 40px;
     align-items: center;
     justify-content: center;
   }
 
   .right-section {
     width: 75%;
-    padding: 30px;
-    margin: 10px;
+    padding: 100px;
+    margin: 5px;
     align-items: center;
     justify-content: center;
   }
   
-
   /* ---------------------------------------------------------------------------------------------- */
   
   .bottom-container {
@@ -48,9 +52,9 @@
     height: 100vh;
     display: flex;
     flex-direction: column;
-    padding: 50px;  /* These padding and margin is imp ....*/
-    margin: 50px;
-    margin-top: 0px;
+    padding: 60px;  /* These padding and margin is imp ....*/
+    /* margin: 50px; */
+    /* margin-top: 0px; */
   }
   
   .bottom-section-1, .bottom-section-2, .bottom-section-3, .bottom-section-4 {
@@ -58,20 +62,21 @@
     height: 100%;
     display: flex;
     flex-direction: row;
+
   }
   
   .bs1-left, .bs1-right, .bs2-left, .bs2-right, .bs3-left, .bs3-right, .bs4-left, .bs4-right {
     width: 50%;
-    height: 90%;
-    padding: 30px;
+    height: 100%;
+    padding: 60px;
   }
-  
   
   .b-image {    
     display: flex;
     justify-content: center;
     align-items: center;
   }
+  
 /* ----------------------------------------------------------------------------------------------------------- */
 
   .b-image img {
@@ -81,21 +86,22 @@
     transition: opacity 0.5s; /* Add a smooth transition effect */
   }
 
-/* ------------------------------------------------------------------------------------------------------------------------ */
+/* ----------------------------------------------------------------------------------------------------------  */
 
   .fixed-size-image {
-    width: 400px; /* Fixes the width to 300 pixels */
-    height: 300px; /* Fixes the height to 200 pixels */
+    width: 450px;            /* Fixes the width to 300 pixels */
+    height: 300px;           /* Fixes the height to 200 pixels */
 }
   
   .b-image img {
     object-fit: cover;
   }
   
-  .b-text, .b-text {
-    background-color: #fff;
-    padding: 20px;
-    margin: 10px;
+  .b-text {
+    /* padding: 20px;
+    margin: 10px; */
+    /* background-color: #00012b; */
+    color: #ffff;
   }
 
   /* -------------------- image hover-text-------------------------------- */
@@ -109,9 +115,10 @@
     display: none;
     position: absolute;
     transform: translateY(-50%);
-    background-color: #151111;
+    /* background-color: #151111; */
+    background-color: #00012b;
     padding: 20px;
-    border: 1px solid #ddd;
+    border: 3px solid #ddd;
     border-radius: 5px;
     color: #f5f3f3;
     font-size: 16px;
@@ -128,14 +135,3 @@
   }
 
   /* --------------------------------------------------------------------- */
-
-  /*--------------------hover content------------------------------------- */
-
-  #hover-content pre {
-    transition: transform 0.3s ease-in-out;
-    transform: translateY(0);
-  }
-  
-  #hover-content pre:hover {
-    transform: translateY(-10px);
-  }
