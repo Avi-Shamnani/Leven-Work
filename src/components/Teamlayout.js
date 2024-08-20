@@ -49,7 +49,7 @@ function Teamlayout() {
    const [activeSlide, setActiveSlide] = React.useState(0);
 
   return (
-    <div className='mt-20 mb-20 ml-24 mr-16 bg-gray-500 '>
+    <div className='mt-20 mb-20 ml-24 mr-16 bg-gray-500 rounded-3xl '>
       <Slider {...settings}>
     {teamData.map((member, index) => 
     <div 
