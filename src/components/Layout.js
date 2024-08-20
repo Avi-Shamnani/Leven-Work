@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
+import logo from './Colorful_Abstract_Infinity_Technology_Free_Logo-removebg-preview.png'
 
 // Taking the children as props from the parent
 function Layout({ children }) {
@@ -44,9 +45,14 @@ function Layout({ children }) {
 
       {/* The navigation bar is constant in our site */}
       <div className="fixed bg-secondary h-20 w-full z-50">
-        <div className="flex w-full justify-end">
+        <div className="flex w-full">
+        <div className="name-box flex ml-10 justify-start align-middle mt-3">
+           <img className="h-16 align-top justify-start bg-gray-700 rounded-full" src = {logo} alt="Leven-work"></img>
+           <div className="h-5 text-5xl align-bottom flex ml-3">LevenWork</div>  
+        </div>
+        <div className="flex w-full justify-end align-middle mt-0 pt-0">
           {navItem.map((item, index) => (
-            <div className="flex flex-col justify-end">
+            <div className="flex flex-col justify-end align-middle">
               {/* Showing upper cloud link structure and icon */}
               {location.pathname === item.path && (
                 <div className="flex flex-col items-center">
@@ -76,7 +82,9 @@ function Layout({ children }) {
             </div>
           ))}
         </div>
-      </div>
+        </div>
+        </div>
+   
       {/* Main Content */}
       <div className="pt-16">{children}</div>
     </div>

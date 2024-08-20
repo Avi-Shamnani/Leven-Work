@@ -4,6 +4,8 @@ import Layout from '../../components/Layout';
 import Footer from '../../components/Footer';
 import './Services.css'; // Import your CSS file
 
+// Importing the Expert Layout
+import ExpertLayout from '../../components/ExpertLayout';
 
 // Define the Home component
 function Home() {
@@ -152,7 +154,7 @@ function Home() {
           </div>
         </div>
       </div>
-
+    <ExpertLayout></ExpertLayout>
     <Footer></Footer>
     </>
   );
