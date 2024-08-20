@@ -13,13 +13,13 @@ function About() {
     <div class="about-page">
     <Layout>
       <section id="Heading">
-        <div id="head">
-          <h2><span>Wel</span>come to <span>L</span>EVEN <span>W</span>ORK</h2>
+        <div  id="head">
+          <h2 className='text-6xl ' ><span>Wel</span>come to <span>L</span>EVEN <span>W</span>ORK</h2>
 
         </div>
       </section>
     <section>
-      <div class="slider">
+      <div class="slider" className='bg-red-300 p-5'>
         <div class="slide-track">
           <div class="slide">
             <img src="image/Img1.png" alt="Image 1" />
@@ -51,18 +51,8 @@ function About() {
         </div>
       </div>
     </section>
-    <div>Abhay</div>
-    <div>Abhay</div>
-    <div>Abhay</div>
-    <div>Abhay</div>
-    <div>Abhay</div>
-    <div>Abhay</div>
-    <div>Abhay</div>
-    <div>Abhay</div>
-    <div>Abhay</div>
-    <div>Abhay</div>
-    <div>Abhay</div>
     </Layout>
+    <Footer></Footer>
     </div>
   )
 }
