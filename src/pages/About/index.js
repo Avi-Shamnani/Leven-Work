@@ -8,6 +8,7 @@ import './about.css'
 
   
 function About() {
+  
   return (
     <div class="about-page">
     <Layout>
@@ -38,9 +39,29 @@ function About() {
           <div class="slide">
             <img src="image/Img3.png" alt="Image 3" />
           </div>
+          <div class="slide">
+            <img src="image/Img1.png" alt="Image 1" />
+          </div>
+          <div class="slide">
+            <img src="image/Img2.png" alt="Image 2" />
+          </div>
+          <div class="slide">
+            <img src="image/Img3.png" alt="Image 3" />
+          </div>
         </div>
       </div>
     </section>
+    <div>Abhay</div>
+    <div>Abhay</div>
+    <div>Abhay</div>
+    <div>Abhay</div>
+    <div>Abhay</div>
+    <div>Abhay</div>
+    <div>Abhay</div>
+    <div>Abhay</div>
+    <div>Abhay</div>
+    <div>Abhay</div>
+    <div>Abhay</div>
     </Layout>
     </div>
   )

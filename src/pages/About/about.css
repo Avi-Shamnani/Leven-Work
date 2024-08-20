@@ -41,10 +41,10 @@
 
 
 .slider {
-    height: 800px;
+    height: 600px;
     margin: auto;
     position: relative;
-    width: 800px;
+    width: 80%;
     overflow: hidden;
     padding: 5vw 8vw 0 8vw;
 }
@@ -52,6 +52,7 @@
 .slide-track {
     display: flex;
     width: calc(250px * 18);
+    /* transition: transform 0.5s; */
     animation: scroll 20s linear infinite;
 }
 
@@ -71,8 +72,8 @@
 }
 
 .slide {
-    height: 450px;
-    width: 800px;
+    height: 500px;
+    width:450px;
     display: flex;
     align-items: center;
     padding: 15px;
@@ -90,7 +91,7 @@ img {
 }
 
 .slide:hover img {
-    transform: translateZ(20px);
+    transform: translateZ(10px);
     /* Added hover effect to image */
 }
 
