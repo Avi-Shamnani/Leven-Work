@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const clientModel = require('../models/client.model.js');
+const clientModel = require('../../models/client.model.js');
 
 const app = express();
 const PORT = process.env.PORT || 5000;

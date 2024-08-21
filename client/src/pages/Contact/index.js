@@ -78,9 +78,9 @@ function Contact() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const fullPhoneNumber = selectedCountryCode + phone;
-
+  
     try {
       const response = await fetch("/contact", {
         method: "POST",
@@ -92,7 +92,7 @@ function Contact() {
           phone: fullPhoneNumber,
         }),
       });
-
+  
       if (response.ok) {
         alert("Your details have been successfully submitted!");
         setFormData({
@@ -124,7 +124,7 @@ function Contact() {
             <span className="close-btn" onClick={closeForm}>
               ×
             </span>
-            <form onSubmit={handleSubmit} className="form">
+            <form  onSubmit={handleSubmit} className="form">
               {/* Full Name */}
               <div className="input-box">
                 <label htmlFor="Name">Full Name</label>
