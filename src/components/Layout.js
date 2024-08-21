@@ -52,7 +52,7 @@ function Layout({ children }) {
         </div>
         <div className="flex w-full justify-end align-middle mt-0 pt-0 mb-2">
           {navItem.map((item, index) => (
-            <div className="flex flex-col justify-end align-middle">
+            <div key={index} className="flex flex-col justify-end align-middle">
               {/* Showing upper cloud link structure and icon */}
               {location.pathname === item.path && (
                 <div className="flex flex-col items-center">

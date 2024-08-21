@@ -81,7 +81,7 @@
     }
     
     .form .input-box textarea::placeholder {
-      color: #000000bc;
+      color: #fff;
     }
     
     .dropdown select::placeholder {

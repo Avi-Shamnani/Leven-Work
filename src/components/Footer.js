@@ -26,20 +26,22 @@ function Footer() {
   };
 
   return (
-    <body id="body">
+    <div id="body">
       
       <footer >
         
           <div id="row">
-            <div id="col">
-              <img src={logo} alt="Company Logo" className="logo" />
-              <h2>Leven Work</h2>
+            <div id="col" className="flex flex-col justify-between space-between align-middle">
+              <img src={logo} alt="Company Logo" className="logo " />
+              <h2 >Leven Work</h2>
               <br></br>
-              <p>
-                Thanks for being part of our online community! We're dedicated
+              <p className="ml-0 justify-center">
+                {/* Thanks for being part of our online community! We're dedicated
                 to providing valuable insights, resources, and expertise to help
                 you navigate the world of digital marketing, and we're always
-                here to help you achieve your online goals and objectives.
+                here to help you achieve your online goals and objectives. */}
+                Great job reaching the end of the page! You've just taken another big step towards unlocking the full potential of your business .
+
               </p>
             </div>
             <div id="col">
@@ -95,7 +97,7 @@ function Footer() {
           &copy; 2024 LEVEN WORK. All rights reserved.
         </div>
       </footer>
-    </body>
+    </div>
   );
 }
 
