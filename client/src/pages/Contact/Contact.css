@@ -2,12 +2,12 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 .contact-page{
-
   
-    margin: 0;
-    padding: 0;
-    margin-top: 30px;
-    box-sizing: border-box;
+  
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
+  box-sizing: border-box;
     font-family: "poppins" ,sans-serif;
   min-height: 100vh;
   display: flex;
@@ -16,9 +16,9 @@
   background-color: #141212;
   /* background-image: url(../../../public/Assets/images/pexels-nietjuh-843226.jpg); */
   background-size: 100% 100%; /* Add this line */
-  padding: 0 20px;
-
-.container{
+  padding: 40px 10px;
+  
+  .container{
     position: relative;
     max-width: 700px;
     width: 100%;
@@ -40,7 +40,7 @@
     margin-top: 30px;
     transition: box-shadow 0.3s ease-in-out;
   }
-
+  
   .container:hover {
   box-shadow: 0 0 15px #0fda4ce0;
 }
@@ -73,9 +73,9 @@
 
 .form .input-box.phone-input select {
   width: 100%;
-    padding: 0 15px;
-    border: 1px solid #0fda4ce0;
-    border-radius: 6px;}
+  padding: 0 15px;
+  border: 1px solid #0fda4ce0;
+  border-radius: 6px;}
     .form .input-box input::placeholder {
       color: #fff;
     }
@@ -89,7 +89,7 @@
     }
     
     .dropdown select{
-
+      
       height: 100%;
       width: 100%;
     outline: none;
@@ -174,8 +174,8 @@
   .form .input-box input:focus, .dropdown select:focus, .input-box textarea:focus {
     box-shadow: 0 0 15px #fff; /* Increased glow effect on focus */
   }
-
-
+  
+  
   .close-btn {
     position: absolute;
     top:3px;
@@ -205,5 +205,6 @@
   }
   
   
-}
+  
 
+}

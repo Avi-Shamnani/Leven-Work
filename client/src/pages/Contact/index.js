@@ -118,7 +118,7 @@ function Contact() {
   return (
     <>
       <Layout>
-        <div className="contact-page">
+        <div className="contact-page pb-96">
           <section className="container bg-yellow-900">
             <header>Contact Us</header>
             <span className="close-btn" onClick={closeForm}>

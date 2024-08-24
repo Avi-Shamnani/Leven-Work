@@ -44,7 +44,7 @@ function Layout({ children }) {
     <div>
 
       {/* The navigation bar is constant in our site */}
-      <div className="fixed bg-[#03346E] h-25 w-full z-50 ">
+      <div className="fixed bg-[#ffffff] h-25 w-full z-50 text-[#000]">
         <div className="flex w-full">
         <div className="name-box flex ml-10 justify-start align-middle mt-3 pt-2">
            <img className="h-16 w-16 align-top justify-start bg-gray-900 rounded-full" src = {logo} alt="Leven-work"></img>
@@ -56,16 +56,16 @@ function Layout({ children }) {
               {/* Showing upper cloud link structure and icon */}
               {location.pathname === item.path && (
                 <div className="flex flex-col items-center">
-                  <div className="h-5 w-10 text-primary rounded-t-full"></div>
+                  <div className="h-5 w-10 text-[#000] rounded-t-full"></div>
                   <div className="h-5 w-20 rounded-t-full text-center">
-                    <i className={`${item.icon} text-primary text-xl`}></i>
+                    <i className={`${item.icon} text-[#000] text-xl`}></i>
                   </div>
                 </div>
               )}
               {/* Here we just want the rounded corners for the edge case so if index === 0 then do round just left side
             and similarly if we are at the last index then we want the rounded corner at right*/}
               <div
-                className={`px-7 text-primary py-2.5 text-xl ${
+                className={`px-7 text-[#000] py-2.5 text-xl ${
                   index === 0 && "rounded-l"
                 } 
                 ${
@@ -75,7 +75,7 @@ function Layout({ children }) {
 
                 {/* If the current route is not active then only icon will be shown in the nav bar */}
                 {location.pathname !== item.path && (
-                  <i className={`${item.icon} text-primary text-xl`}></i>
+                  <i className={`${item.icon} text-[#000] text-xl`}></i>
                 )}
                 <Link to={`${item.path}`}>{item.title}</Link>
               </div>

@@ -11,31 +11,32 @@ function About() {
     <div class="about-page">
       <Layout></Layout>
       
-      <div class="middle" className=" text-white justify-center pt-24 align-middle ">
-        <h1 className="text-6xl text-[#6EACDA] justify-center text-center pb-14 font-semibold">
+      {/* Herre this color can also be used as the bg 5F8670 */}
+      <div class="middle" className=" text-[#fff] font-semibold justify-center pt-24 bg-[#219C90] align-middle ">
+        <h1 className="text-6xl text-[#FFF455] justify-center text-center pb-14 font-semibold">
           
           LevenWork: Your Marketing Mavericks
         </h1>
 
-        <div class="para" className="text-white text-[20px] p-5 text-2xl justify-center align-middle text-center">
-          <p>
-            We're <b className="text-[#00FFFF]">Marketing Mavericks </b>, a fearless squad of creative
+        <div class="para" className="text-[backcolor] text-[20px] p-5 text-2xl justify-center align-middle text-center">
+          <p className="text-2xl">
+            We're <b className="text-[#000] text-[28px]">Marketing Mavericks </b>, a fearless squad of creative
             strategists redefining the marketing landscape. With a perfect blend
             of artistry and analytics, we craft campaigns that captivate,
             convert, and create lasting impact.
           </p>
           <br />
 
-          <p >
-            <b className="text-[#00FFFF]">Our expertise is your advantage. </b> We delve deep into your
+          <p className="text-2xl">
+            <b className="text-[#000] text-[28px]" >Our expertise is your advantage. </b> We delve deep into your
             brand, understanding its essence to develop strategies that resonate
             with your target audience. From crafting compelling narratives to
             executing flawless campaigns, we've got you covered.
           </p>
           <br />
 
-          <p>
-            <b className="text-[#00FFFF]">We're not just trendsetters; we're game-changers. </b> Our
+          <p className="text-2xl">
+            <b className="text-[#000] text-[28px] font-bold">We're not just trendsetters; we're game-changers. </b> Our
             passion for innovation drives us to explore uncharted territories
             and deliver groundbreaking solutions.
           </p>
@@ -75,7 +76,7 @@ function About() {
         </div>
       </section>
       <div className="faqs w-fulls bg-gray-800  align-middle justify-center p-10 text-2xl text-[#ffffff] rounded-3xl m-10">
-        <h3 className="text-5xl justify-center ml-[300px] text-[#6EACDA]">
+        <h3 className="text-5xl justify-center ml-[300px] text-[#A1DD70]">
           Mind Blowing Facts About Us🤯
         </h3>
         <details className="">

@@ -34,37 +34,90 @@ function Footer() {
             <h2>Leven Work</h2>
             <br />
             <p className="footer-text">
-              Great job reaching the end of the page! You've just taken another big step towards unlocking the full potential of your business.
+              Great job reaching the end of the page! You've just taken another
+              big step towards unlocking the full potential of your business.
             </p>
           </div>
           <div className="footer-col">
             <div className="footer-contact-info">
               <h3>Contact Us</h3>
               <ul>
-                <li><ion-icon name="call-outline"></ion-icon>Phone: 123434224</li>
-                <li><ion-icon name="mail-outline"></ion-icon>Email: example@gmail.com</li>
+                <li>
+                  <ion-icon name="call-outline"></ion-icon>
+                  <a href="tel:+918120665322">Phone: +918120665322</a>
+                </li>
+                <li>
+                  <ion-icon name="mail-outline"></ion-icon>
+                  <a href="mailto:info.levenwork@.online">
+                    Email: info.levenwork@.online
+                  </a>
+                  <br />
+                  <a href="mailto:hr@levenwork@.online">hr.levenwork@.online</a>
+                </li>
               </ul>
             </div>
           </div>
           <div className="footer-col">
             <h3>Links</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Missions</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">Services</a>
+              </li>
+              <li>
+                <a href="#">Missions</a>
+              </li>
+              <li>
+                <a href="#">About</a>
+              </li>
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
             </ul>
           </div>
           <div className="footer-col footer-social-icons-container">
             <div className="footer-social-icons">
               <h3>Social Media</h3>
               <ul>
-                <li><a href="#" title="Facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                <li><a href="#" title="Twitter"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                <li><a href="#" title="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                <li><a href="#" title="GitHub"><ion-icon name="logo-github"></ion-icon></a></li>
-                <li><a href="#" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+                <li>
+                  <a href="https://www.facebook.com/levenwork" title="Facebook">
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://x.com/LevenWork?t=nguxeIhV1DyPalwSXGQJOQ&s=08"
+                    title="Twitter"
+                  >
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.instagram.com/leven_work?utm_source=qr&igsh=MXF6Y3BrbGR6azczag=="
+                    title="Instagram"
+                  >
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://youtube.com/@levenwork?si=nRONTqs8G8mtl0mH"
+                    title="Youtube"
+                  >
+                    <ion-icon name="logo-youtube"></ion-icon>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://www.linkedin.com/in/leven-work"
+                    title="LinkedIn"
+                  >
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -72,7 +125,11 @@ function Footer() {
 
         <a href="#" className="footer-back-to-top" onClick={backToTop}>
           <FontAwesomeIcon icon={faArrowUp} />
+          <br/>
         </a>
+          <a className="bg-red-600 footer-whatsapp " href="https://api.whatsapp.com/send?phone=918120665322&text=Hello">
+            <ion-icon name="logo-whatsapp" className='object-contain'></ion-icon>
+          </a>
         <hr className="footer-hr" />
         <div className="footer-copyright">
           &copy; 2024 LEVEN WORK. All rights reserved.
