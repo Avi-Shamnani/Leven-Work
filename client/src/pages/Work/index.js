@@ -74,11 +74,11 @@ function Work() {
     <div>
       <Layout>
       </Layout>
-        <div id="work-page" className="pt-10 mb-0 pb-0">
+        <div id="work-page" className="pt-10 mb-0 pb-0 pl-10 bg-[#141212]">
         <div id="our_work">
           <div id="work_row">
             <div id="work_col" className="">
-              <h3>LevenWork Achievements</h3>
+              <h3>LevenWork</h3>
             </div>
             <div id="work_col">
               <p className="work_paragraph">

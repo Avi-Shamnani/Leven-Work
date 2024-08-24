@@ -6,7 +6,7 @@
   border: none;
   outline: none;
   font-family: "Poppins", sans-serif;
-  background-image: linear-gradient(to right, #080808, #04060f);
+  background-color : #141212;
 }
 
 #work-page .wrapper {
@@ -80,6 +80,7 @@
   background-image: linear-gradient(to right, #080808, #04060f);
   transition: transform 0.5s ease-in-out;
   text-align: center;
+  border: 2px solid white;
 }
 
 #work-page .work_image-container {
@@ -141,7 +142,7 @@
   width: fit-content;
   margin-bottom: 20px;
   position: relative;
-  font-size: 100px;
+  font-size: 75px;
   margin-top: 10px;
   color: #fbfbfc;
   box-shadow: #fded07;

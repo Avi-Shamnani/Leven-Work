@@ -20,11 +20,11 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    background-color: #00012b;
-    color: #fff;
+    background-color: #FFDBD9;
+    color: #021526;
 
     padding-top: 100px;
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 .heading-container img {
