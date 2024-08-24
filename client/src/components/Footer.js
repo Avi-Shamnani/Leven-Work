@@ -14,7 +14,7 @@ function Footer() {
       const clientHeight = document.documentElement.clientHeight;
 
       setIsFooterVisible(scrollPosition + clientHeight >= pageHeight);
-      console.log("isFooterVisible:", isFooterVisible); // Added line
+      console.log("isFooterVisible:", isFooterVisible);
     };
     window.addEventListener("scroll", handleScroll);
 
@@ -26,74 +26,55 @@ function Footer() {
   };
 
   return (
-    <div id="body">
-      
-      <footer >
-        
-          <div id="row">
-            <div id="col" className="flex flex-col justify-between space-between align-middle">
-              <img src={logo} alt="Company Logo" className="logo " />
-              <h2 >Leven Work</h2>
-              <br></br>
-              <p className="ml-0 justify-center">
-                {/* Thanks for being part of our online community! We're dedicated
-                to providing valuable insights, resources, and expertise to help
-                you navigate the world of digital marketing, and we're always
-                here to help you achieve your online goals and objectives. */}
-                Great job reaching the end of the page! You've just taken another big step towards unlocking the full potential of your business .
-
-              </p>
-            </div>
-            <div id="col">
-              <div id="contact-info">
-                <h3>Contact Us</h3>
-                <ul>
-                <li><ion-icon name="call-outline"></ion-icon>Phone : 123434224</li>
-                <li><ion-icon name="mail-outline"></ion-icon>Email :example@gmail.com</li>
-                </ul>
-              </div>
-            </div>
-            <div id="col">
-              <h3>Links</h3>
+    <div className="footer-body">
+      <footer className="footer">
+        <div className="footer-row">
+          <div className="footer-col">
+            <img src={logo} alt="Company Logo" className="footer-logo" />
+            <h2>Leven Work</h2>
+            <br />
+            <p className="footer-text">
+              Great job reaching the end of the page! You've just taken another big step towards unlocking the full potential of your business.
+            </p>
+          </div>
+          <div className="footer-col">
+            <div className="footer-contact-info">
+              <h3>Contact Us</h3>
               <ul>
-                <li>
-                  <a href="#">Home</a>
-                </li>
-                <li>
-                  <a href="#">Services</a>
-                </li>
-                <li>
-                  <a href="#">Missions</a>
-                </li>
-                <li>
-                  <a href="#">About</a>
-                </li>
-                <li>
-                  <a href="#">Contact Us</a>
-                </li>
+                <li><ion-icon name="call-outline"></ion-icon>Phone: 123434224</li>
+                <li><ion-icon name="mail-outline"></ion-icon>Email: example@gmail.com</li>
               </ul>
             </div>
-            <div id="col" className=
-            "social-icons-container">
-                <div id="social_icons">
-                    <h3>Social Media</h3>
-                    <ul>
-                        <li><a href="#" title="Facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
-                        <li><a href="#" title="Twitter"><ion-icon name="logo-twitter"></ion-icon></a></li>
-                        <li><a href="#" title="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
-                        <li><a href="#" title="GitHub"><ion-icon name="logo-github"></ion-icon></a></li>
-                        <li><a href="#" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-                    </ul>
-                </div>
+          </div>
+          <div className="footer-col">
+            <h3>Links</h3>
+            <ul>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Missions</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div className="footer-col footer-social-icons-container">
+            <div className="footer-social-icons">
+              <h3>Social Media</h3>
+              <ul>
+                <li><a href="#" title="Facebook"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                <li><a href="#" title="Twitter"><ion-icon name="logo-twitter"></ion-icon></a></li>
+                <li><a href="#" title="Instagram"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                <li><a href="#" title="GitHub"><ion-icon name="logo-github"></ion-icon></a></li>
+                <li><a href="#" title="LinkedIn"><ion-icon name="logo-linkedin"></ion-icon></a></li>
+              </ul>
             </div>
           </div>
-     
+        </div>
 
-        <a href="#" id="back-to-top" onClick={backToTop}>
+        <a href="#" className="footer-back-to-top" onClick={backToTop}>
           <FontAwesomeIcon icon={faArrowUp} />
         </a>
-        <hr />
-        <div id="copyright">
+        <hr className="footer-hr" />
+        <div className="footer-copyright">
           &copy; 2024 LEVEN WORK. All rights reserved.
         </div>
       </footer>

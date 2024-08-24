@@ -58,7 +58,7 @@ function Home() {
     </Layout>
       <div className="main-container mt-10 mb-[700px]">
 
-        <div className="top-container">
+        <div className="top-container ">
           <div className="left-section">
             <h1 style={{ fontSize: '65px', fontWeight: 'bold' }}>Our <br /> Ser<span class="blue">vi</span>ces</h1>
           </div>

@@ -44,11 +44,11 @@ function Layout({ children }) {
     <div>
 
       {/* The navigation bar is constant in our site */}
-      <div className="fixed bg-secondary h-25 w-full z-50 ">
+      <div className="fixed bg-[#03346E] h-25 w-full z-50 ">
         <div className="flex w-full">
         <div className="name-box flex ml-10 justify-start align-middle mt-3 pt-2">
            <img className="h-16 w-16 align-top justify-start bg-gray-900 rounded-full" src = {logo} alt="Leven-work"></img>
-           <div className="h-5 ml-5 text-5xl align-bottom flex pt-2">𝑳𝒆𝒗𝒆𝒏𝒘𝒐𝒓𝒌</div>  
+           <div className="h-5 ml-5 text-3xl align-bottom flex pt-3">𝑳𝒆𝒗𝒆𝒏𝒘𝒐𝒓𝒌</div>  
         </div>
         <div className="flex w-full justify-end align-middle mt-0 pt-0 mb-2">
           {navItem.map((item, index) => (

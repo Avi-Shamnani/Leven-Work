@@ -49,7 +49,7 @@ function Teamlayout() {
    const [activeSlide, setActiveSlide] = React.useState(0);
 
   return (
-    <div className='mt-20 mb-20 ml-24 mr-16 bg-gray-500 rounded-3xl '>
+    <div className='mt-20 mb-20 ml-24 mr-16 bg-gray-800 rounded-3xl '>
       <Slider {...settings}>
     {teamData.map((member, index) => 
     <div 
@@ -58,7 +58,7 @@ function Teamlayout() {
       index === activeSlide ? 'scale-100' : 'scale-75'
     } transition-transform duration-300`}
   >
-        <div className='image w-[380px] h-52 bg-red-500  mt-3 ml-3.5 mb-0.5 rounded-xl'><img src={member.image} alt={member.name} className='rounded-full h-56 w-full'></img> 
+        <div className='image w-[380px] h-52 bg-gray-100  mt-3 ml-3.5 mb-0.5 rounded-xl'><img src={member.image} alt={member.name} className='rounded-full h-56 w-full'></img> 
         </div>
         <div className='description flex tracking-tighter flex-col mt-0 w-full p-4'>
             <div className='text-gray-100 font-bold text-xl'>{member.name}</div>

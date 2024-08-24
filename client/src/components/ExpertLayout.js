@@ -45,10 +45,10 @@
         ];
         
     return (
-      <div className="flex flex-wrap justify-center bg-gray-500 p-20 rounded-xl">
-        <div  className="block w-full justify-center text-6xl mb-8"><h1 className="justify-center w-full flex">How w  <i className="font-semibold">e WORK</i></h1></div>
+      <div className="flex flex-wrap justify-center bg-gray-500 p-20 rounded-xl space-x-24 space-y-16 mb-0">
+        <div  className="block w-full justify-center text-6xl mb-8"><h1 className="justify-center w-full text-[#00FFFF] flex">How w  <strong className="font-semibold">e WORK</strong></h1></div>
       {works.map((work, index)=>(
-      <div key={index} className="w-[500px] h-[800px] m-4 p-4 bg-black rounded-2xl">
+      <div key={index} className="w-[500px] h-[800px] m-4 p-4 bg-[#000] rounded-2xl">
         <div className="w-[470px] h-[500px]"><img src = {work.image} alt={work.title} className="w-full rounded-xl h-full"></img></div>
         <div className="w-[470px] tracking-tighter">
           <h1 className="font-bold text-3xl mx-2 my-6">{work.title}</h1>

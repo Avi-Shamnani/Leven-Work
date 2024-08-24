@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "poppins" ,sans-serif;
+}
+
+#mainheading{
+    font-size: 65px;
+    font-weight: bold;
+    text-align: center;
+    /* padding: 80px; */
+}
+
+.heading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    background-color: #00012b;
+    color: #fff;
+
+    padding-top: 100px;
+    padding-bottom: 40px;
+}
+
+.heading-container img {
+    width: 170px;            /* Adjust the width of the image */
+    height: 150px;           /* Maintain the aspect ratio */
+    border-radius: 50%;
+    border: 2px solid rgb(6, 6, 6);
+    object-fit: cover; /* Add this to make the image responsive */
+}
+
+.content{
+    text-align: center;
+    background-color: #151111;
+    color: #fff;
+}
+
+/* styling the button linking to our-team */
+#team{
+    padding: 15px;
+    background-color: #00012b;
+    color: #fff;
+    border-color: #fff;
+    border-width: 2px;
+}
+
+/* --------------------------------------------------------------- */
+
+.imgdiv{
+    width: 650px;
+    height: 450px;
+    padding: 40px;
+    border-radius: 20%;
+}
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 768px) {
+    #mainheading {
+        font-size: 30px;
+    }
+    .heading-container {
+        padding-top: 50px;
+        padding-bottom: 20px;
+    }
+    .heading-container img {
+        width: 100px;
+        height: 80px;
+        object-fit: cover; /* Add this to make the image responsive */
+    }
+    .imgdiv {
+        width: 100%;
+        height: auto;
+        padding: 20px;
+    }
+    #team {
+        padding: 10px;
+        font-size: 14px;
+    }
+    .content {
+        padding: 20px;
+    }
+}
+
+/* Media query for smaller mobile screens */
+@media only screen and (max-width: 480px) {
+    #mainheading {
+        font-size: 20px;
+    }
+    .heading-container {
+        padding-top: 30px;
+        padding-bottom: 10px;
+    }
+    .heading-container img {
+        width: 80px;
+        height: 60px;
+        object-fit: cover; /* Add this to make the image responsive */
+    }
+    .imgdiv {
+        padding: 10px;
+    }
+    #team {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .content {
+        padding: 10px;
+    }
+}

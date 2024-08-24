@@ -73,7 +73,8 @@ function Work() {
   return (
     <div>
       <Layout>
-        <div id="work-page">
+      </Layout>
+        <div id="work-page" className="pt-10 mb-0 pb-0">
         <div id="our_work">
           <div id="work_row">
             <div id="work_col" className="">
@@ -170,7 +171,6 @@ function Work() {
           </div>
         </div>
         </div>
-      </Layout>
       <Footer />
     </div>
   );

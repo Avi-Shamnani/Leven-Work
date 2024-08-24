@@ -12,7 +12,7 @@ module.exports = {
         "specialColor": "#ff0ff2"
       },
       fontFamily: {
-        playfair: ['"Playfair Display"', 'serif'],
+        
         poppins: ['Poppins', 'sans-serif'],
       },
     },
