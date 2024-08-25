@@ -51,7 +51,7 @@ function About() {
         <div className="slider">
           <div className="slide-track">
             <div className="slide">
-              <img src="image/Img1.png" alt="Image 1" />
+              <img src="image/Img1.png" alt="Image 1"  />
             </div>
             <div className="slide">
               <img src="image/Img2.png" alt="Image 2" />
