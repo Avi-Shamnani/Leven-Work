@@ -44,7 +44,7 @@ function Layout({ children }) {
     <div>
 
       {/* The navigation bar is constant in our site */}
-      <div className="fixed bg-[#ffffff] h-25 w-full z-50 text-[#000]">
+      <div className="fixed bg-[#ffffff] top-0 h-25 w-full z-50 text-[#000]">
         <div className="flex w-full">
         <div className="name-box flex ml-10 justify-start align-middle mt-3 pt-2">
            <img className="h-16 w-16 align-top justify-start bg-gray-900 rounded-full" src = {logo} alt="Leven-work"></img>

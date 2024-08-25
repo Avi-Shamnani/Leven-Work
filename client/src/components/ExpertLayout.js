@@ -45,8 +45,8 @@
         ];
         
     return (
-      <div className="flex flex-wrap justify-center bg-gray-500 p-20 rounded-xl space-x-24 space-y-16 mb-0">
-        <div  className="block w-full justify-center text-6xl mb-8"><h1 className="justify-center w-full text-[#00FFFF] flex">How w  <strong className="font-semibold">e WORK</strong></h1></div>
+      <div className="flex flex-wrap justify-center bg-[#D6EFFF] text-white p-20 rounded-xl space-x-24 space-y-16 mb-0">
+        <div  className="block text-[64px] w-full justify-center align-center text-center mb-8"><h1 className="justify-center w-full text-[#000] ">Our Proven Methodology That Brings <br/><strong className="font-semibold text-[#0b7676]">Intense Growth</strong></h1></div>
       {works.map((work, index)=>(
       <div key={index} className="w-[500px] h-[800px] m-4 p-4 bg-[#000] rounded-2xl">
         <div className="w-[470px] h-[500px]"><img src = {work.image} alt={work.title} className="w-full rounded-xl h-full"></img></div>

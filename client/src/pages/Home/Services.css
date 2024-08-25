@@ -1,27 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
-.blue{
-  color: #22FFFF;
+.black{
+  color: #000;
 }
 
 .main-container {
     width: 100%;    
+    padding-top: 30px;
     display: flex;
     flex-direction: column;
     color: #ffff;
+    /* background-color: #000; */
+    background-image: linear-gradient(  #f4f9fa,#caf1f9, #afd2fb,#b8eafbe7 ,#76bff8ef);
   }
 
   .curved-shape {     /* this is the elliptical shape at top right container.... */
-    background-color: rgb(57, 55, 58);
+    background-color: #D6EFFF;
+    color: #000;
     padding: 100px;
     clip-path: ellipse(50% 50%); /* creates an elliptical shape */
+    transition: transform 1s ease, box-shadow 0s ease;
+    animation: pulse 2s infinite;
   }
+
+  /* ----------------------------------------------------------------------- */
   
   .top-container {
     width: 100%;
     display: flex;
     flex-direction: flex;
+    box-shadow: 0 0 15px #0b7676;
   }
   
   .left-section  {
@@ -40,27 +48,33 @@
     margin: 5px;
     align-items: center;
     justify-content: center;
+
+    /* this is for the border color for curverd-shape */
+/*    
+    box-shadow: 0 0 15px #0b7676;
+    border-radius: 50%; */
+
   }
   
   /* ---------------------------------------------------------------------------------------------- */
   
   .bottom-container {
     width: 100%;
-    height: 100vh;
+    height: auto;
     display: flex;
     flex-direction: column;
     padding-left: 60px;  /* These padding and margin is imp ....*/
     padding-right: 60px;  /* These padding and margin is imp ....*/
-    /* margin: 50px; */
-    /* margin-top: 0px; */
   }
   
   .bottom-section-1, .bottom-section-2, .bottom-section-3, .bottom-section-4 {
     width: 100%;
-    height: 100%;
+    height: 400px;
+    margin: 50px;
+    margin-left: 0px;
     display: flex;
     flex-direction: row;
-
+    /* background-image: linear-gradient(  #f4f9fa,#caf1f9, #afd2fb,#b8eafbe7 ,#76bff8ef); */
   }
   
   .bs1-left, .bs1-right, .bs2-left, .bs2-right, .bs3-left, .bs3-right, .bs4-left, .bs4-right {
@@ -68,11 +82,16 @@
     height: 100%;
     padding: 60px;
   }
-  
+
   .b-image {    
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  pre{
+    color: #000;
+    font-size: 20px;
   }
   
 /* ----------------------------------------------------------------------------------------------------------- */
@@ -95,13 +114,6 @@
     object-fit: cover;
   }
   
-  .b-text {
-    /* padding: 20px;
-    margin: 10px; */
-    /* background-color: #00012b; */
-    color: #ffff;
-  }
-
   /* -------------------- image hover-text-------------------------------- */
 
   .b-image {
@@ -114,12 +126,12 @@
     position: absolute;
     transform: translateY(-50%);
     /* background-color: #151111; */
-    background-color: #00012b;
+    background-color: #0b7676;
     padding: 20px;
-    border: 3px solid #ddd;
+    border: 3px solid #fff;
     border-radius: 5px;
     color: #f5f3f3;
-    font-size: 16px;
+    font-size: 20px;
     font-weight: bold;
     z-index: 1;
   }

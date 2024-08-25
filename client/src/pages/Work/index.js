@@ -74,13 +74,13 @@ function Work() {
     <div>
       <Layout>
       </Layout>
-        <div id="work-page" className="pt-10 mb-0 pb-0 pl-10 bg-[#141212]">
-        <div id="our_work">
-          <div id="work_row">
-            <div id="work_col" className="">
-              <h3>LevenWork</h3>
+        <div id="work-page" className="pt-10 m-0 p-0 pl-10 bg-gradient-to-r from-[#d1f3f4] via-[#a4ecf1] to-[#66d5f7]">
+        <div id="our_work" className="">
+        <div id="work_row">
+        <div className="work_col" id="ourwork">
+              <h3>Our Work</h3>
             </div>
-            <div id="work_col">
+            <div className="work_col">
               <p className="work_paragraph">
                 We craft data-driven strategies that transform clicks into connections and content into
                 conversations, creating dynamic digital experiences that elevate brands, amplify impact, and drive

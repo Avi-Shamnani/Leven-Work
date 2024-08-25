@@ -118,8 +118,8 @@ function Contact() {
   return (
     <>
       <Layout>
-        <div className="contact-page pb-96">
-          <section className="container bg-yellow-900">
+        <div className="contact-page">
+          <section className="container bg-white">
             <header>Contact Us</header>
             <span className="close-btn" onClick={closeForm}>
               ×
@@ -218,15 +218,15 @@ function Contact() {
 
               {/* Services */}
               <div className="dropdown">
-                <label htmlFor="services">Services</label>
+                <label htmlFor="Services">Services</label>
                 <select
-                  name="services"
-                  id="services"
-                  value={formData.services}
+                  name="Services"
+                  id="Services"
+                  value={formData.Services}
                   onChange={handleInputChange}
                   required
                 >
-                  <optgroup label="Services">
+                  <optgroup label="Services" >
                     <option value="Digital Marketing">
                       Digital Marketing
                     </option>

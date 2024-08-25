@@ -1,58 +1,57 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate from react-router-dom
+import { useNavigate } from 'react-router-dom';
 import Layout from '../../components/Layout';
 import Footer from '../../components/Footer';
 import './Clients.css'; // Ensure the path to the CSS file is correct
 
 function Clients() {
   const [imageSrc, setImageSrc] = useState("images/handshake.png");
-  const [hover, setHover] = useState(false); // State to track hover status
-  const navigate = useNavigate(); // Initialize useNavigate
+  const [hover, setHover] = useState(false);
+  const navigate = useNavigate();
 
-  // Function to handle mouse enter
   const handleMouseEnter = () => {
-    setImageSrc("images/yellow-heart-.png"); // Change image source on hover
+    setImageSrc("images/hand1-unscreen.gif");
     setHover(true);
   };
 
-  // Function to handle mouse leave
   const handleMouseLeave = () => {
-    setImageSrc("images/handshake.png"); // Reset image source when hover ends
+    setImageSrc("images/handshake.png");
     setHover(false);
   };
 
   const handleButtonClick = () => {
-    navigate("/team"); // Use navigate to redirect to the team page
+    navigate("/team");
   };
 
   return (
     <div className='main-container'>
+      
       <Layout>
         <div className="heading-container bg-[#f51e1e]">
           <h1 id="mainheading">Our Clients</h1>
-          <img src="images/img1.png" alt="Client Image" />
+          <img src="images/client_logo.png" alt="Client Image" />
         </div>
 
         <div className="content">
           <br />
-          <h1 style={{ textDecoration: 'underline', textDecorationThickness: '1px' }} className='text-4xl'>"Your Vision, Our Mission"</h1>
+          <h1 style={{ textDecoration: 'underline', textDecorationThickness: '1px' }} className='text-4xl animated-text relative text-color-change'>"Your Vision, Our Mission"</h1>
           <br />
-          <p style={{ fontSize: '20px' }}> "Welcome to <b className='text-[#52c5f6]'>Leven Work!</b>"</p>
+          <p style={{ fontSize: '20px' }}> "Welcome to <b className='text-[#0b7676]'>Leven Work!</b>"</p>
           <br />
           <h2 className='text-xl'>"Partnering with us will propel your brand to its peak potential and set new standards of Excellence."</h2>
           <br />
           <p>
-            <b style={{ color: 'aqua' }} className='text-3xl'>Ready to unleash your brand's full potential?</b> Let's embark on this exciting
+            <b style={{ color: '#000' }} className='text-3xl'>Ready to unleash your brand's full potential?</b> Let's embark on this exciting
             journey together.
           </p>
           <br />
           <div className=''>
             <img 
               id="image" 
-              className='justify-center align-middle w-full ml-96' 
+              className={`justify-center align-middle w-full ml-96 ${hover ? 'butterfly' : ''}`} 
               src={imageSrc} 
               style={{ width: '600px', height: '400px' }} 
-              alt="Handshake" 
+              alt="Image" 
               onMouseEnter={handleMouseEnter} 
               onMouseLeave={handleMouseLeave} 
             />
@@ -63,7 +62,7 @@ function Clients() {
             to elevate their digital presence. While we're a new agency, our team is equipped with the skills,
             creativity, and passion to deliver outstanding results.`}
           </p>
-          <p className='text-[#00FFFF] text-3xl'><b>Want to see the Minds Behind Your Success...</b></p>
+          <p className='text-[#0b7676] text-3xl'><b>Want to see the Minds Behind Your Success...</b></p>
           <br />
           <button id="team" style={{ fontSize: '20px' }} onClick={handleButtonClick}><b>See Brilliant Minds</b></button>
           <br /><br />
@@ -79,13 +78,18 @@ function Clients() {
             </div>
           </div>
           <br /><br /><br />
-          <div className='bg-slate-800 px-0 pt-20 pb-5 rounded-full'>
-            <p className='text-3xl text-[#00FFFF]'><b>Are You Ready to Take Your Brand to New Heights....!!! If Yes Then <a className='font-bold bg-gradient-to-r from-[#44BCFF] via-[#e0d5de] to-[#91e4a6]  transition-all  border-solid border-4 border-gray-100 p-2 rounded-full text-black' href='/contact'>Join Us</a></b></p>
+          <div className='bg-slate-800 px-0 pt-10 pb-5 '>
+            <p className='text-3xl text-[#fff] mb-0 pb-0'><b className='mb-0 pb-0'>Are You Ready to Take Your Brand to New Heights....!!! If Yes Then 
+              <a className='font-bold bg-gradient-to-r from-[#ADD8E6] via-[#FFFFFF] to-[#E0FFFF] transition-all border-solid border-4 border-gray-100 p-2 ml-4 rounded-full text-black shadow-lg hover:bg-gradient-to-r hover:from-[#BFEFFF] hover:via-[#FFFFFF] hover:to-[#E0FFFF] hover:shadow-xl' href='/contact'>
+  Join Us
+</a>
+</b></p>
             <br /><br />
-            <h2 className='text-3xl'>We Will be happy to be part of one more success story.</h2>
+            <h2 className='text-3xl text-[#fff] mt-0'>We Will be happy to be part of one more success story.</h2>
           </div>
-          <br /><br />
-          <div className='bg-[#284b63] rounded-full py-5 text-xl'>
+          <br />
+          <div className='bg-[#]  px-5 py-9 pt-0 mt-0 text-xl flex justify-center '>
+
             <p>{`At Leven Work,
             our team is a dynamic group of passionate strategists, creative thinkers, and tech enthusiasts 
             dedicated to making your brand shine. Each member brings unique skills and experience, 

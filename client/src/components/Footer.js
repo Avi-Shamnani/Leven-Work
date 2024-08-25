@@ -125,11 +125,14 @@ function Footer() {
 
         <a href="#" className="footer-back-to-top" onClick={backToTop}>
           <FontAwesomeIcon icon={faArrowUp} />
-          <br/>
+          <br />
         </a>
-          <a className="bg-red-600 footer-whatsapp " href="https://api.whatsapp.com/send?phone=918120665322&text=Hello">
-            <ion-icon name="logo-whatsapp" className='object-contain'></ion-icon>
-          </a>
+        <a
+          className="bg-red-600 footer-whatsapp "
+          href="https://api.whatsapp.com/send?phone=918120665322&text=Hello"
+        >
+          <ion-icon name="logo-whatsapp" className="object-contain"></ion-icon>
+        </a>
         <hr className="footer-hr" />
         <div className="footer-copyright">
           &copy; 2024 LEVEN WORK. All rights reserved.

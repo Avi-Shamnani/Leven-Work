@@ -1,6 +1,6 @@
 import React from 'react'; 
 import Gaurav from './Gaurav2.png'; 
-import jobBappa from './jobBappa.png'; 
+// import Avi from './images/Avi.png'; 
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -8,29 +8,29 @@ import './TeamLayout.css'
 function Teamlayout() {
   const teamData = [
     {
+      name : "Avi Shamnani",
+      image : "./images/Avi.png",
+      role : "Content Creator | Marketing Storyteller | Engagement Expert",
+      specialization : `I craft compelling content that captivates audiences, drives engagement, and fuels brand growth. With a passion for creative storytelling and a keen understanding of marketing strategies, I develop content that resonates and converts.`
+    },
+    {
       name : "Gaurav Dwivedi",
-      image : Gaurav,
+      image : "./images/Gaurav.png",
       role : "Ads Manager",
       specialization : `Highly creative and results-driven professional with expertise in Graphic Design, SEO, Google Ads, and Meta Ads. Proficient in crafting visually stunning designs and driving digital campaigns that deliver.`
     },
     {
       name : "Avi Shamnani",
-      image : jobBappa,
-      role : "CEO",
-      specialization : "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et consectetur omnis laboriosam."
+      image : "./images/Avi.png",
+      role : "Content Creator | Marketing Storyteller | Engagement Expert",
+      specialization : `I craft compelling content that captivates audiences, drives engagement, and fuels brand growth. With a passion for creative storytelling and a keen understanding of marketing strategies, I develop content that resonates and converts.`
     },
     {
-      name : "Vikram Khuswaha",
-      image : "https://png.pngtree.com/png-vector/20240106/ourmid/pngtree-lord-bal-ganesh-beautiful-chaturdashi-baby-ganesha-look-happy-chaturthi-png-image_11419984.png",
-      role : "Co- Founder",
-      specialization : "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et consectetur omnis laboriosam."
+      name : "Sarad Gupta",
+      image : "./images/Sarad.png",
+      role : "Graphic Designer",
+      specialization : "Visual Storyteller | Graphic Designer | Creative Problem Solver I craft compelling visuals that capture attention, convey messages, and drive results. With a keen eye for detail and a passion for innovation, I bring brands to life through effective design solutions"
     },
-    {
-      name : "Vishnu",
-      image : "https://png.pngtree.com/png-vector/20240106/ourmid/pngtree-lord-bal-ganesh-beautiful-chaturdashi-baby-ganesha-look-happy-chaturthi-png-image_11419984.png",
-      role : "Co- Founder",
-      specialization : "Lorem ipsum dolor sit, amet consectetur adipisicing elit.Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et consectetur omnis laboriosam."
-    }
   ]
 
   const settings = {
@@ -49,7 +49,7 @@ function Teamlayout() {
    const [activeSlide, setActiveSlide] = React.useState(0);
 
   return (
-    <div className='mt-20 mb-20 ml-24 mr-16 bg-gray-800 rounded-3xl '>
+    <div className='mt-20 mb-10 ml-24 mr-16 bg-gray-800 rounded-3xl '>
       <Slider {...settings}>
     {teamData.map((member, index) => 
     <div 
@@ -58,12 +58,12 @@ function Teamlayout() {
       index === activeSlide ? 'scale-100' : 'scale-75'
     } transition-transform duration-300`}
   >
-        <div className='image w-[380px] bg-gray-100 h-56 mt-3 ml-3.5 mb-0.5 rounded-xl'><img src={member.image} alt={member.name} className='rounded-full h-60 w-full'></img> 
+        <div className='image w-[380px] bg-gray-100 h-64 mt-3 ml-3.5 mb-0.5 rounded-xl'><img src={member.image} alt={member.name} className='h-full w-full'></img> 
         </div>
         <div className='description flex tracking-tighter flex-col mt-0 w-full p-4'>
-            <div className='text-[#FFF455] font-bold text-xl'>{member.name}</div>
-            <div className='text-[#4793AF] font-medium'>{member.role}</div>
-            <div className='text-[#C0D6E8] font-normal flex tracking-tighter'>{member.specialization}</div>
+            <div className='text-[#fff] font-bold text-xl'>{member.name}</div>
+            <div className='text-[#e6dbdb] font-medium'>{member.role}</div>
+            <div className='text-[#fff] font-normal flex tracking-tighter'>{member.specialization}</div>
 
         </div>
     </div>

@@ -11,6 +11,7 @@
     font-size: 65px;
     font-weight: bold;
     text-align: center;
+    color: #060505; /* changed text color to white */
     /* padding: 80px; */
 }
 
@@ -20,16 +21,18 @@
     align-items: center;
     text-align: center;
     justify-content: center;
-    background-color: #FFDBD9;
-    color: #021526;
+       background-image: linear-gradient(  #f4f9fa,#caf1f9, #afd2fb,#b8eafbe7 ,#76bff8ef);
 
-    padding-top: 100px;
-    padding-bottom: 60px;
+    color: #120f0f; /* changed text color to white */
+    font-weight: bold; /* added bold font weight */
+
+    padding-top: 80px;
+    padding-bottom: 50px;
 }
 
 .heading-container img {
-    width: 170px;            /* Adjust the width of the image */
-    height: 150px;           /* Maintain the aspect ratio */
+    width: 200px;            /* Adjust the width of the image */
+    height: 200px;           /* Maintain the aspect ratio */
     border-radius: 50%;
     border: 2px solid rgb(6, 6, 6);
     object-fit: cover; /* Add this to make the image responsive */
@@ -37,36 +40,55 @@
 
 .content{
     text-align: center;
-    background-color: #151111;
-    color: #fff;
+    background-image: linear-gradient(  #f4f9fa,#caf1f9, #afd2fb,#9ec9fae7 ,#8dc0faef);
+    color: #121111; /* changed text color to white */
+    font-weight: bold; /* added bold font weight */
 }
 
 /* styling the button linking to our-team */
-#team{
+#team {
     padding: 15px;
-    background-color: #00012b;
-    color: #fff;
-    border-color: #fff;
-    border-width: 2px;
+    background-image: linear-gradient(#beb2fc);
+    color: #100e0e;
+    border-color: #1c1c1769;
+    border-width: 5px;
+    border-radius: 10%;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s; /* add transition effect */
+}
+
+#team:hover {
+    background-color: #a6cefc; /* change background color on hover */
+    color: #252121; /* change text color on hover */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* add box shadow on hover */
+    transform: translateY(-2px); /* add a slight lift effect on hover */
 }
 
 /* --------------------------------------------------------------- */
 
-.imgdiv{
+.imgdiv {
     width: 650px;
     height: 450px;
     padding: 40px;
     border-radius: 20%;
+    /* add transition effect */
 }
 
+.imgdiv:hover {
+    /* add shadow on hover */
+    transform: scale(1.05); /* add a slight zoom effect on hover */
+    transition: transform 0.3s, box-shadow 0.3s; /* add transition effect */
+}
 /* Media query for mobile screens */
 @media only screen and (max-width: 768px) {
     #mainheading {
         font-size: 30px;
+        color: #0e0d0d; /* changed text color to white */
     }
     .heading-container {
         padding-top: 50px;
         padding-bottom: 20px;
+        color: #080606; /* changed text color to white */
     }
     .heading-container img {
         width: 100px;
@@ -81,9 +103,11 @@
     #team {
         padding: 10px;
         font-size: 14px;
+        color: #150f0f; /* changed text color to white */
     }
     .content {
         padding: 20px;
+        color: #0e0c0c; /* changed text color to white */
     }
 }
 
@@ -91,10 +115,12 @@
 @media only screen and (max-width: 480px) {
     #mainheading {
         font-size: 20px;
+        color: #fff; /* changed text color to white */
     }
     .heading-container {
         padding-top: 30px;
         padding-bottom: 10px;
+        color: #fff; /* changed text color to white */
     }
     .heading-container img {
         width: 80px;
@@ -107,8 +133,57 @@
     #team {
         padding: 5px;
         font-size: 12px;
+        color: #fff; /* changed text color to white */
     }
     .content {
         padding: 10px;
+        color: #fff; /* changed text color to white */
     }
 }
+
+@keyframes flutter {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .butterfly {
+    animation: flutter 1s infinite;
+  }
+  @keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  @keyframes textColorChange {
+    0% { color: #44BCFF; }
+    50% { color: #FF77FF; }
+    100% { color: #44BCFF; }
+  }
+  
+  .animated-text {
+    font-size: 4rem;
+    background: linear-gradient(45deg, #2d9797, #228585, #0b7676);
+    background-size: 600% 600%;
+    animation: gradientAnimation 10s ease infinite, textColorChange 5s ease infinite;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    position: relative;
+  }
+  
+  .animated-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #44BCFF;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    animation: underlineAnimation 1s forwards;
+    z-index: 1;
+  }
+
+ 
