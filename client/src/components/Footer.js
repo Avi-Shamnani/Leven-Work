@@ -34,8 +34,7 @@ function Footer() {
             <h2>Leven Work</h2>
             <br />
             <p className="footer-text">
-              Great job reaching the end of the page! You've just taken another
-              big step towards unlocking the full potential of your business.
+              Great job reaching the end of the page! You've just taken another big step towards unlocking the full potential of your business.
             </p>
           </div>
           <div className="footer-col">
@@ -60,26 +59,16 @@ function Footer() {
           <div className="footer-col">
             <h3>Links</h3>
             <ul>
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">Services</a>
-              </li>
-              <li>
-                <a href="#">Missions</a>
-              </li>
-              <li>
-                <a href="#">About</a>
-              </li>
-              <li>
-                <a href="#">Contact Us</a>
-              </li>
+              <li><a href="#">Home</a></li>
+              <li><a href="#">Services</a></li>
+              <li><a href="#">Missions</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact Us</a></li>
             </ul>
           </div>
           <div className="footer-col footer-social-icons-container">
             <div className="footer-social-icons">
-              <h3>Social Media</h3>
+              <h3 className="mb-0 b-0">Social Media</h3>
               <ul>
                 <li>
                   <a href="https://www.facebook.com/levenwork" title="Facebook">
@@ -132,6 +121,12 @@ function Footer() {
           href="https://api.whatsapp.com/send?phone=918120665322&text=Hello"
         >
           <ion-icon name="logo-whatsapp" className="object-contain"></ion-icon>
+        </a>
+        <a
+          className="bg-red-600 footer-call "
+           href="tel:+918120665322"
+        >
+<ion-icon name="call-outline" className="object-contain "></ion-icon>
         </a>
         <hr className="footer-hr" />
         <div className="footer-copyright">

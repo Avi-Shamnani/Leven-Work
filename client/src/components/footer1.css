@@ -1,24 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
 
 .footer-body {
   margin: 5;
   padding: 0;
   box-sizing: border-box;
-  font-family: "poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .footer {
-  
   position: absolute;
   width: 100%;
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   background-image: linear-gradient(to right, #c3e2fd);
   color: #0d0c0c;
-  font-family: "poppins", sans-serif;
   font-size: 15px;
   line-height: 18px;
-  margin-bottom: 0px;
-  padding-bottom: 0px;
+  padding-bottom: 0;
+  margin-top: 1%;
 }
 
 .footer-row {
@@ -42,7 +40,6 @@
 }
 
 .footer-col h3 {
-  width: fit-content;
   margin-bottom: 40px;
   position: relative;
 }
@@ -58,22 +55,25 @@
 }
 
 .footer-social-icons-container {
-  position: absolute;
-  right: 40px;
+  position: relative;
+  margin-top: 0px;
 }
 
 .footer-social-icons {
   text-align: center;
 }
 
+.footer-social-icons ul {
+  display: flex;
+  flex-direction: column; /* Vertical alignment for desktop */
+  align-items: center;
+}
+
 .footer-social-icons ul li {
+  display: inline-block;
   width: 30px;
-  height: 20px;
-  border-radius: 10%;
-  text-align: center;
-  list-style: none;
-  margin-right: 1px;
-  cursor: pointer;
+  height: 30px;
+  margin: 0px;
 }
 
 .footer-social-icons a {
@@ -81,11 +81,11 @@
   font-size: 1rem;
   text-decoration: none;
   display: block;
-  width: 20px;
-  height: 20px;
-  line-height: 20px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
   text-align: center;
-  border-radius: 10%;
+  border-radius: 50%;
   transition: all 0.3s ease;
   box-shadow: 0 0 10px rgb(241, 246, 241);
 }
@@ -96,11 +96,6 @@
   box-shadow: 0 0 20px rgba(51, 255, 0, 0.8);
 }
 
-.footer-social-icons a.glow {
-  box-shadow: 0 0 40px rgba(84, 247, 8, 0.8);
-  animation: glow 2s infinite;
-}
-
 .footer-back-to-top {
   position: fixed;
   bottom: 20px;
@@ -108,37 +103,10 @@
   z-index: 1;
   cursor: pointer;
   background-color: #3245d5;
-  padding-left: 12px;
-  padding-right: 12px;
-  padding-top: 10px;
-  padding-bottom: 10px;
+  padding: 12px;
   border-radius: 100%;
-  font-size: 20px;
-  color:#f5eded;
-}
-
-.footer-back-to-top i {
-  font-size: 24px;
-  color: #0f0d0d;
-}
-
-.footer-back-to-top ion-icon {
-  font-size: 36px;
+  font-size: 22px;
   color: #f5eded;
-}
-
-.footer-back-to-top ion-icon:hover {
-  color: #03bc12;
-}
-
-.footer-back-to-top i.fas {
-  font-size: 24px;
-  color: #fbf7f7;
-  margin-left: 0px;
-}
-
-.footer-back-to-top i.fas:hover {
-  color: #f5f4f4;
 }
 
 .footer-contact-info li {
@@ -152,25 +120,23 @@
 
 .footer-logo {
   margin-bottom: 20px;
-  top: 0;
-  left: 0;
   width: 70px;
   height: 70px;
-  border-radius: 20%;
+  border-radius: 100%;
   margin: 10px;
+  margin-left: 100px;
   padding: 3px;
   transition: transform 0.5s ease, box-shadow 0.5s ease;
   animation: pulse 2s infinite;
 }
 
-.footer-logo:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 20px rgba(189, 13, 13, 0.5);
+.footer h2{
+  margin-left: 100px;
 }
 
-.footer-logo:active {
-  transform: scale(0.9);
-  box-shadow: 0 0 10px rgba(18, 12, 12, 0.5);
+.footer-text
+{
+  text-align: center;
 }
 
 @keyframes pulse {
@@ -201,18 +167,60 @@
   margin-bottom: 20px;
 }
 
-.footer-whatsapp{
+/* Footer WhatsApp and Call buttons */
+.footer-whatsapp, .footer-call {
   color: #f5eded;
-  font-size: 40px;
   position: fixed;
-  bottom: 70px;
   right: 20px;
   z-index: 1;
   cursor: pointer;
-  background-color: #3245d5;
-  /* padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 8px;
-  padding-bottom: 8px; */
-  border-radius: 100%;
+  border-radius: 50%;
+  font-size: 25px;
+  padding: 10px;
 }
+
+.footer-whatsapp {
+  background-color: #159612;
+  bottom: 70px;
+}
+
+.footer-call {
+  background-color: #0572d1;
+  bottom: 120px;
+}
+
+/* Media Queries for Mobile */
+@media (max-width: 1024px) {
+  .footer-row {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer-col {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer-social-icons-container {
+    position: static;
+    margin-top: 10px;
+  }
+
+  .footer-social-icons ul {
+    flex-direction: row; /* Horizontal alignment for mobile */
+    flex-wrap: wrap;
+  }
+
+  .footer-logo {
+    margin: 0 auto 20px auto; /* Center the logo horizontally */
+    display: block;
+  }
+
+  .footer h2 {
+    text-align: center;
+    margin-left: 0; /* Remove left margin to center the text */
+    margin-top: 10px; /* Add some space between the logo and text */
+  }
+}
+

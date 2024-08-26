@@ -10,6 +10,7 @@ function Contact() {
   const [flagUrl, setFlagUrl] = useState("https://flagcdn.com/w320/in.png");
   const [phone, setPhone] = useState("");
   const [errorMsg, setErrorMsg] = useState("");
+  const [isFormComplete, setIsFormComplete] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -67,6 +68,13 @@ function Contact() {
       setErrorMsg("");
     }
     setPhone(phoneNumber);
+    
+    const allFieldsFilled = Object.values({
+      ...formData,
+      phone: phoneNumber
+    }).every(value => value.trim() !== "");
+
+    setIsFormComplete(allFieldsFilled && phoneNumber.length === 10);
   };
 
   const handleInputChange = (e) => {
@@ -74,6 +82,13 @@ function Contact() {
       ...formData,
       [e.target.name]: e.target.value,
     });
+
+    const allFieldsFilled = Object.values({
+      ...formData,
+      [e.target.name]: e.target.value,
+    }).every(value => value.trim() !== "");
+
+    setIsFormComplete(allFieldsFilled && phone.trim().length === 10);
   };
 
   const handleSubmit = async (e) => {
@@ -106,6 +121,7 @@ function Contact() {
         setPhone("");
         setSelectedCountryCode("+91");
         setFlagUrl("https://flagcdn.com/w320/in.png");
+        setIsFormComplete(false);
       } else {
         alert("Failed to submit your details. Please try again.");
       }
@@ -118,7 +134,7 @@ function Contact() {
   return (
     <>
       <Layout>
-        <div className="contact-page">
+        <div className={`contact-page ${isFormComplete ? "completed-form" : ""}`}>
           <section className="container bg-white">
             <header>Contact Us</header>
             <span className="close-btn" onClick={closeForm}>
@@ -127,7 +143,7 @@ function Contact() {
             <form  onSubmit={handleSubmit} className="form">
               {/* Full Name */}
               <div className="input-box">
-                <label htmlFor="Name">Full Name</label>
+                <label htmlFor="Name">Full Name <span>*</span></label>
                 <input
                   type="text"
                   name="name"
@@ -140,7 +156,7 @@ function Contact() {
 
               {/* Email */}
               <div className="input-box">
-                <label htmlFor="Email">Email</label>
+                <label htmlFor="Email">Email<span>*</span></label>
                 <input
                   type="email"
                   name="email"
@@ -153,7 +169,7 @@ function Contact() {
 
               {/* Mobile Number */}
               <div className="input-box">
-                <label>Mobile Number</label>
+                <label>Mobile Number<span>*</span></label>
                 <div className="phone-input flex">
                   <select
                     id="country-code"
@@ -211,8 +227,8 @@ function Contact() {
                   name="business"
                   value={formData.business}
                   onChange={handleInputChange}
-                  placeholder="What Business do you have?"
-                  required
+                  placeholder="What Business do you have? (Optional)"
+                  
                 />
               </div>
 
@@ -244,29 +260,23 @@ function Contact() {
                   name="location"
                   value={formData.location}
                   onChange={handleInputChange}
-                  placeholder="Location"
-                  required
+                  placeholder="Enter your Location (Optional)"
                 />
               </div>
 
-              {/* Message */}
+              {/* Description */}
               <div className="input-box">
+                <label htmlFor="description">Description</label>
                 <textarea
-                  id="description"
                   name="description"
-                  rows="4"
+                  id="description"
                   value={formData.description}
                   onChange={handleInputChange}
-                  placeholder="Message"
-                  style={{ textAlign: "center" }}
-                  required
+                  placeholder="Add a Description (Optional)"
                 ></textarea>
               </div>
-
               {/* Submit Button */}
-              <button id="submit-btn" type="submit">
-                Connect With Us Now!
-              </button>
+              <button className="btn" type="submit">Send Message</button>
             </form>
           </section>
         </div>

@@ -1,92 +1,96 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from './Colorful_Abstract_Infinity_Technology_Free_Logo-removebg-preview.png'
+import logo from './Colorful_Abstract_Infinity_Technology_Free_Logo-removebg-preview.png';
 
-// Taking the children as props from the parent
 function Layout({ children }) {
-  // This function is used to find the location of the current route (in react-router-dom)
   const location = useLocation();
-  const navItem = [
-    {
-      title: "About Us",
-      path: "/about",
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-      // These icons are coming from the remixicons section
-      icon: "ri-information-line",
-    },
-    {
-      title: "Services",
-      path: "/",
-      icon: "ri-service-line",
-    },
-    {
-      title: "Contact Us",
-      path: "/contact",
-      icon: "ri-user-star-fill",
-    },
-    {
-      title: "Our Team",
-      path: "/team",
-      icon: "ri-team-line",
-    },
-    {
-      title: "Clients",
-      path: "/clients",
-      icon: "ri-heart-2-line",
-    },
-    {
-      title: "Our Work",
-      path: "/work",
-      icon: "ri-home-heart-line",
-    },
+  const navItems = [
+    { title: "About Us", path: "/about", icon: "ri-information-line" },
+    { title: "Services", path: "/", icon: "ri-service-line" },
+    { title: "Contact Us", path: "/contact", icon: "ri-user-star-fill" },
+    { title: "Our Team", path: "/team", icon: "ri-team-line" },
+    { title: "Clients", path: "/clients", icon: "ri-heart-2-line" },
+    { title: "Our Work", path: "/work", icon: "ri-home-heart-line" },
   ];
+
   return (
-    <div>
-
-      {/* The navigation bar is constant in our site */}
-      <div className="fixed bg-[#ffffff] top-0 h-25 w-full z-50 text-[#000]">
+    <div className="flex flex-col min-screen">
+      {/* Navigation bar */}
+      <header className="fixed bg-[#fff] h-25 w-full z-50 shadow-md">
         <div className="flex w-full">
-        <div className="name-box flex ml-10 justify-start align-middle mt-3 pt-2">
-           <img className="h-16 w-16 align-top justify-start bg-gray-900 rounded-full" src = {logo} alt="Leven-work"></img>
-           <div className="h-5 ml-5 text-3xl align-bottom flex pt-3">𝑳𝒆𝒗𝒆𝒏𝒘𝒐𝒓𝒌</div>  
-        </div>
-        <div className="flex w-full justify-end align-middle mt-0 pt-0 mb-2">
-          {navItem.map((item, index) => (
-            <div key={index} className="flex flex-col justify-end align-middle">
-              {/* Showing upper cloud link structure and icon */}
-              {location.pathname === item.path && (
-                <div className="flex flex-col items-center">
-                  <div className="h-5 w-10 text-[#000] rounded-t-full"></div>
-                  <div className="h-5 w-20 rounded-t-full text-center">
-                    <i className={`${item.icon} text-[#000] text-xl`}></i>
-                  </div>
-                </div>
-              )}
-              {/* Here we just want the rounded corners for the edge case so if index === 0 then do round just left side
-            and similarly if we are at the last index then we want the rounded corner at right*/}
-              <div
-                className={`px-7 text-[#000] py-2.5 text-xl ${
-                  index === 0 && "rounded-l"
-                } 
-                ${
-                  index === navItem.length - 1 && "rounded-r"
-                } flex items-center justify-center space-x-2`}
-              >
-
-                {/* If the current route is not active then only icon will be shown in the nav bar */}
-                {location.pathname !== item.path && (
-                  <i className={`${item.icon} text-[#000] text-xl`}></i>
-                )}
-                <Link to={`${item.path}`}>{item.title}</Link>
-              </div>
+          {/* Logo and site name */}
+          <div className="name-box flex ml-4 md:ml-10 justify-start align-middle mt-3 pt-2 md:mb-0 md:pt-0 md:ml-1 td:mb-0 td:ml-0 td:pl-0">
+            <img
+              className="h-12 w-12 md:h-14 md:w-14 align-top justify-start bg-gray-900 rounded-full"
+              src={logo}
+              alt="Leven-work"
+            />
+            <div className="text-xl md:text-3xl align-bottom text-[#000] flex pt-3 ml-3 md:ml-5">
+              𝑳𝒆𝒗𝒆𝒏𝒘𝒐𝒓𝒌
             </div>
-          ))}
+          </div>
+
+          {/* Mobile menu button */}
+          <button
+            className="lg:hidden flex items-center ml-auto mr-4"
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+          >
+            <i className="ri-menu-line text-2xl text-black"></i>
+          </button>
+
+          {/* Tablet and Mobile Navigation */}
+          <nav className="hidden lg:flex w-full justify-end align-middle mt-0 pt-0 mb-2">
+            {navItems.map((item, index) => (
+              <div key={index} className="flex flex-col justify-end align-middle">
+                {location.pathname === item.path && (
+                  <div className="flex flex-col items-center">
+                    <div className="h-5 w-10 text-black rounded-t-full"></div>
+                    <div className="h-5 w-20 rounded-t-full text-center">
+                      <i className={`${item.icon} text-black text-xl`}></i>
+                    </div>
+                  </div>
+                )}
+                <div
+                  className={`px-7 py-2.5 text-black text-xl ${
+                    index === 0 ? "rounded-l" : ""
+                  } ${index === navItems.length - 1 ? "rounded-r" : ""} flex items-center justify-center space-x-2`}
+                >
+                  {location.pathname !== item.path && (
+                    <i className={`${item.icon} text-black text-xl`}></i>
+                  )}
+                  <Link to={item.path} className="text-black">{item.title}</Link>
+                </div>
+              </div>
+            ))}
+          </nav>
         </div>
-        </div>
-        </div>
-   
+
+        {/* Mobile navigation menu */}
+        {isMenuOpen && (
+          <nav className="lg:hidden fixed inset-0 bg-white shadow-lg z-50 flex flex-col items-start p-4 space-y-2">
+            {navItems.map((item, index) => (
+              <Link
+                key={index}
+                to={item.path}
+                className={`flex items-center px-4 py-2 text-black text-lg ${
+                  location.pathname === item.path ? "bg-gray-200 rounded-lg" : ""
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <i className={`${item.icon} text-xl`}></i>
+                <span className="ml-2">{item.title}</span>
+              </Link>
+            ))}
+          </nav>
+        )}
+      </header>
+
       {/* Main Content */}
-      <div className="pt-16">{children}</div>
+      <main className="flex-1 pt-16">
+        {children}
+      </main>
     </div>
   );
 }

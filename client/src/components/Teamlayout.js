@@ -20,10 +20,10 @@ function Teamlayout() {
       specialization : `Highly creative and results-driven professional with expertise in Graphic Design, SEO, Google Ads, and Meta Ads. Proficient in crafting visually stunning designs and driving digital campaigns that deliver.`
     },
     {
-      name : "Avi Shamnani",
-      image : "./images/Avi.png",
-      role : "Content Creator | Marketing Storyteller | Engagement Expert",
-      specialization : `I craft compelling content that captivates audiences, drives engagement, and fuels brand growth. With a passion for creative storytelling and a keen understanding of marketing strategies, I develop content that resonates and converts.`
+      name : "Roshan  Chaudhary",
+      image : "./images/Roshan.png",
+      role : "Editor | Visual Storyteller | Marketing Maestro",
+      specialization : `I weave compelling narratives through video, crafting engaging stories that captivate audiences and drive brand success. With expertise in editing software and a keen eye for detail, I bring marketing visions to life.`
     },
     {
       name : "Sarad Gupta",

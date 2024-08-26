@@ -1,20 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Layout from "../../components/Layout";
 import ExpertLayout from "../../components/ExpertLayout";
 import Footer from "../../components/Footer";
+import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
 import "./about.css";
 
-
-// Layout is the fixed component in our page so we have wrapped all the other functions inside it.
-
 function About() {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const visitInfo = JSON.parse(sessionStorage.getItem("visitInfo")) || { visitCount: 0 };
+    let delay;
+
+    if (visitInfo.visitCount === 0) {
+      delay = 10000; // First visit - 10 seconds
+    } else if (visitInfo.visitCount === 1) {
+      delay = 30000; // Second visit - 30 seconds
+    } else {
+      delay = 60000; // Subsequent visits - 60 seconds
+    }
+
+    const timer = setTimeout(() => {
+      navigate("/contact"); // Redirect to the Contact page after the delay
+      visitInfo.visitCount += 1;
+      sessionStorage.setItem("visitInfo", JSON.stringify(visitInfo)); // Update visit count in sessionStorage
+    }, delay);
+
+    return () => clearTimeout(timer); // Clear the timer if the component unmounts
+  }, [navigate]);
   
   return (
     <div className="about-page">
       <Layout />
       <div className="top"></div>
-      
-      {/* Herre this color can also be used as the bg 5F8670 */}
       <div className="middle text-[#000] font-semibold justify-center pt-24 align-middle mb-0 pb-0">
         <h1 className="text-6xl text-[#0b7676] justify-center text-center pb-0 font-semibold">
           LevenWork: Your Marketing Mavericks
@@ -45,13 +63,11 @@ function About() {
         </div>
       </div>
 
-      
-
       <section className="bg-gradient-to-r from-[#d1f3f4] via-[#a4ecf1] to-[#66d5f7]">
         <div className="slider">
           <div className="slide-track">
             <div className="slide">
-              <img src="image/Img1.png" alt="Image 1"  />
+              <img src="image/Img1.png" alt="Image 1" />
             </div>
             <div className="slide">
               <img src="image/Img2.png" alt="Image 2" />
@@ -81,7 +97,7 @@ function About() {
         </div>
       </section>
 
-      <div className="faqs w-fulls align-middle justify-center p-10 text-2xl text-[#000] rounded-3xl m-10">
+      <div className="faqs w-full align-middle justify-center p-10 text-2xl text-[#000] rounded-3xl m-10">
         <h3 className="text-5xl justify-center ml-[300px] text-[#0b7676]">
           Mind Blowing Facts About Us🤯
         </h3>

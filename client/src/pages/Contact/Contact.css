@@ -162,9 +162,9 @@
     border-radius: 6px;
   }
   .form .input-box input:valid, .dropdown select:valid, .input-box textarea:valid {
-    background-color: #fff; /* Change background color to white when valid */
+    /* background-color: rgba(255, 255, 255, 0.824); Change background color to white when valid */
     border: 1px solid #32755c; /* Change border color to green when valid */
-    box-shadow: 0 0 15px #fff; /* Increased glow effect when valid */
+    box-shadow: 0 0 15px #454444; /* Increased glow effect when valid */
     color: #000; /* Change text color to black when valid */
   }
   
@@ -208,4 +208,9 @@
   
   
 
+}
+
+
+span{
+  color: #df1010;
 }
