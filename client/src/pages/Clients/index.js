@@ -33,7 +33,12 @@ function Clients() {
 
         <div className="content">
           <br />
-          <h1 className='text-4xl animated-text relative text-color-change'>"Your Vision, Our Mission"</h1>
+          <h1 className='text-4xl animated-text relative text-color-change mb-4 sm:mb-6 md:mb-8'>
+  "Your Vision,
+</h1><h1 className='text-4xl animated-text relative text-color-change mb-4 sm:mb-6 md:mb-8'>
+  Our Mission"
+</h1>
+
           <br />
           <p style={{ fontSize: '25px' }}> "Welcome to <b className='text-[#0b7676]'>Leven Work!</b>"</p>
           <br />
@@ -76,11 +81,17 @@ function Clients() {
           </div>
           <br /><br /><br />
           <div className='bg-slate-800 px-0 pt-10 pb-5 '>
-            <p className='text-3xl text-[#fff] mb-0 pb-0'><b className='mb-0 pb-0 text-[#fff]'>Are You Ready to Take Your Brand to New Heights....!!! If Yes Then 
-              <a className='font-bold bg-gradient-to-r from-[#ADD8E6] via-[#FFFFFF] to-[#E0FFFF] transition-all border-solid border-4 border-gray-100 p-2 ml-4 rounded-full text-black shadow-lg hover:bg-gradient-to-r hover:from-[#BFEFFF] hover:via-[#FFFFFF] hover:to-[#E0FFFF] hover:shadow-xl' href='tel:+918120665322'>
-  Join Us
-</a>
-</b></p>
+          <p className='text-3xl text-[#fff] mb-0 pb-0'>
+  <b className='mb-0 pb-0 text-[#fff]'>Are You Ready to Take Your Brand to New Heights....!!! If Yes Then 
+    <a 
+      className='font-bold bg-gradient-to-r from-[#ADD8E6] via-[#FFFFFF] to-[#E0FFFF] transition-all border-solid border-4 border-gray-100 p-2 ml-4 rounded-full text-black shadow-lg hover:bg-gradient-to-r hover:from-[#BFEFFF] hover:via-[#FFFFFF] hover:to-[#E0FFFF] hover:shadow-xl text-lg sm:text-base md:text-sm lg:text-xs' 
+      href='tel:+918120665322'
+    >
+      Join Us
+    </a>
+  </b>
+</p>
+
             <br /><br />
             <h2 className='text-3xl text-[#fff] mt-0'>We Will be happy to be part of one more success story.</h2>
           </div>

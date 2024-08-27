@@ -28,7 +28,7 @@ function Layout({ children }) {
               alt="Leven-work"
             />
             <div className="text-xl md:text-3xl align-bottom text-[#000] flex pt-3 ml-3 md:ml-5">
-              𝑳𝒆𝒗𝒆𝒏𝒘𝒐𝒓𝒌
+              <a href='/'>𝑳𝒆𝒗𝒆𝒏𝒘𝒐𝒓𝒌</a>
             </div>
           </div>
 

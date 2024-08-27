@@ -65,7 +65,7 @@ function About() {
       </section>
 
       <div className="faqs w-full align-middle justify-center p-10 text-2xl text-[#000] rounded-3xl m-10">
-        <h3 className="text-5xl justify-center ml-[300px] text-[#0b7676]">
+        <h3 className="text-5xl justify-center text-center text-[#0b7676]">
           Mind Blowing Facts About Us🤯
         </h3>
         <details>
