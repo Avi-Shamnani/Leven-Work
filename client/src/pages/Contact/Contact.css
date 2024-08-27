@@ -187,6 +187,7 @@
     width: 20px;
     height: 20px;
     font-size: 18px;
+    color: #000;
     cursor: pointer;
     background-color: #ca0c0c;
     padding: 4px 8px;
@@ -213,4 +214,112 @@
 
 span{
   color: #df1010;
+}
+/* Mobile View - Targeting Only the Contact Page */
+@media (max-width: 767px) {
+  .contact-page {
+    padding: 20px;
+  }
+  
+  .contact-page .container {
+    padding: 15px;
+    width: 100%;
+    box-shadow: 0 0 10px #afb1afe0;
+  }
+  
+  .contact-page .container header {
+    font-size: 2rem;
+  }
+  
+  .contact-page .form .input-box {
+    margin-top: 15px;
+  }
+  
+  .contact-page .form .input-box input,
+  .contact-page .form .input-box textarea,
+  .contact-page .dropdown select {
+    width: 100%;
+    font-size: 0.9rem;
+  }
+  
+  .contact-page .phone-input {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  
+  .contact-page .form .input-box.phone-input select {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .contact-page .form .input-box input.inline {
+    width: 100%;
+  }
+  
+  .contact-page button {
+    width: 100%;
+    margin: 10px 0;
+  }
+  
+  .contact-page .close-btn {
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
+}
+
+/* Tablet View - Targeting Only the Contact Page */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .contact-page {
+    padding: 30px;
+  }
+  
+  .contact-page .container {
+    padding: 20px;
+    width: 90%;
+  }
+  
+  .contact-page .container header {
+    font-size: 2.5rem;
+  }
+  
+  .contact-page .form .input-box {
+    margin-top: 15px;
+  }
+  
+  .contact-page .form .input-box input,
+  .contact-page .form .input-box textarea,
+  .contact-page .dropdown select {
+    width: 100%;
+    font-size: 1rem;
+  }
+  
+  .contact-page .phone-input {
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  .contact-page .form .input-box.phone-input select {
+    width: auto;
+    margin-right: 10px;
+  }
+  
+  .contact-page .form .input-box input.inline {
+    width: calc(100% - 60px); /* Adjust width to accommodate select box */
+  }
+  
+  .contact-page button {
+    width: 100%;
+    margin: 15px 0;
+  }
+  
+  .contact-page .close-btn {
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    font-size: 16px;
+  }
 }

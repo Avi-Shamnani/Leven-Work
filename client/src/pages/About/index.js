@@ -2,33 +2,12 @@ import React, { useEffect } from "react";
 import Layout from "../../components/Layout";
 import ExpertLayout from "../../components/ExpertLayout";
 import Footer from "../../components/Footer";
-import { useNavigate } from "react-router-dom"; // Import useNavigate for redirection
+import { useNavigate } from "react-router-dom";
 import "./about.css";
 
 function About() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const visitInfo = JSON.parse(sessionStorage.getItem("visitInfo")) || { visitCount: 0 };
-    let delay;
-
-    if (visitInfo.visitCount === 0) {
-      delay = 10000; // First visit - 10 seconds
-    } else if (visitInfo.visitCount === 1) {
-      delay = 30000; // Second visit - 30 seconds
-    } else {
-      delay = 60000; // Subsequent visits - 60 seconds
-    }
-
-    const timer = setTimeout(() => {
-      navigate("/contact"); // Redirect to the Contact page after the delay
-      visitInfo.visitCount += 1;
-      sessionStorage.setItem("visitInfo", JSON.stringify(visitInfo)); // Update visit count in sessionStorage
-    }, delay);
-
-    return () => clearTimeout(timer); // Clear the timer if the component unmounts
-  }, [navigate]);
   
+
   return (
     <div className="about-page">
       <Layout />
@@ -47,19 +26,7 @@ function About() {
           </p>
           <br />
 
-          <p>
-            <b className="text-[#0b7676] text-[28px]">Our expertise is your advantage.</b> We delve deep into your
-            brand, understanding its essence to develop strategies that resonate
-            with your target audience. From crafting compelling narratives to
-            executing flawless campaigns, we've got you covered.
-          </p>
-          <br />
-
-          <p>
-            <b className="text-[#0b7676] text-[28px]">We're not just trendsetters; we're game-changers.</b> Our
-            passion for innovation drives us to explore uncharted territories
-            and deliver groundbreaking solutions.
-          </p>
+          
         </div>
       </div>
 
@@ -110,7 +77,7 @@ function About() {
             <br />
             <br />
             <img
-              className="w-60 h-60 ml-96 border-4 rounded-xl"
+              className="panda-image panda-container w-60 h-60 ml-96 border-4 rounded-xl"
               src="./images/pandaEat.gif"
               alt="Panda Eating"
             />
@@ -125,7 +92,7 @@ function About() {
             <br />
             <br />
             <img
-              className="w-60 h-50 ml-96 border-4 rounded-xl"
+              className="panda-image panda-container w-60 h-50 ml-96 border-4 rounded-xl"
               src="./images/panda-hye.gif"
               alt="Panda Climbing"
             />
@@ -144,7 +111,7 @@ function About() {
             <br />
             <br />
             <img
-              className="w-60 h-50 ml-96 border-4 rounded-xl"
+              className="panda-image panda-container w-60 h-50 ml-96 border-4 rounded-xl"
               src="./images/panda.gif"
               alt="Cute Panda"
             />

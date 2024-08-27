@@ -25,7 +25,6 @@ function Clients() {
 
   return (
     <div className='main-container'>
-      
       <Layout>
         <div className="heading-container bg-[#f51e1e]">
           <h1 id="mainheading">Our Clients</h1>
@@ -34,25 +33,23 @@ function Clients() {
 
         <div className="content">
           <br />
-          <h1 style={{ textDecoration: 'underline', textDecorationThickness: '1px' }} className='text-4xl animated-text relative text-color-change'>"Your Vision, Our Mission"</h1>
+          <h1 className='text-4xl animated-text relative text-color-change'>"Your Vision, Our Mission"</h1>
           <br />
-          <p style={{ fontSize: '20px' }}> "Welcome to <b className='text-[#0b7676]'>Leven Work!</b>"</p>
+          <p style={{ fontSize: '25px' }}> "Welcome to <b className='text-[#0b7676]'>Leven Work!</b>"</p>
           <br />
           <h2 className='text-xl'>"Partnering with us will propel your brand to its peak potential and set new standards of Excellence."</h2>
           <br />
           <p>
-            <b style={{ color: '#000' }} className='text-3xl'>Ready to unleash your brand's full potential?</b> Let's embark on this exciting
-            journey together.
+            <b style={{ color: '#000' }} className='text-3xl'>Ready to unleash your brand's full potential?</b> Let's embark on this exciting journey together.
           </p>
           <br />
-          <div className=''>
+          <div className='image-container'>
             <img 
               id="image" 
-              className={`justify-center align-middle w-full ml-96 ${hover ? 'butterfly' : ''}`} 
+              className={`justify-center align-middle ${hover ? 'butterfly' : ''}`} 
               src={imageSrc} 
-              style={{ width: '600px', height: '400px' }} 
               alt="Image" 
-              onMouseEnter={handleMouseEnter} 
+              onMouseEnter={handleMouseEnter}   
               onMouseLeave={handleMouseLeave} 
             />
           </div>
@@ -79,8 +76,8 @@ function Clients() {
           </div>
           <br /><br /><br />
           <div className='bg-slate-800 px-0 pt-10 pb-5 '>
-            <p className='text-3xl text-[#fff] mb-0 pb-0'><b className='mb-0 pb-0'>Are You Ready to Take Your Brand to New Heights....!!! If Yes Then 
-              <a className='font-bold bg-gradient-to-r from-[#ADD8E6] via-[#FFFFFF] to-[#E0FFFF] transition-all border-solid border-4 border-gray-100 p-2 ml-4 rounded-full text-black shadow-lg hover:bg-gradient-to-r hover:from-[#BFEFFF] hover:via-[#FFFFFF] hover:to-[#E0FFFF] hover:shadow-xl' href='/contact'>
+            <p className='text-3xl text-[#fff] mb-0 pb-0'><b className='mb-0 pb-0 text-[#fff]'>Are You Ready to Take Your Brand to New Heights....!!! If Yes Then 
+              <a className='font-bold bg-gradient-to-r from-[#ADD8E6] via-[#FFFFFF] to-[#E0FFFF] transition-all border-solid border-4 border-gray-100 p-2 ml-4 rounded-full text-black shadow-lg hover:bg-gradient-to-r hover:from-[#BFEFFF] hover:via-[#FFFFFF] hover:to-[#E0FFFF] hover:shadow-xl' href='tel:+918120665322'>
   Join Us
 </a>
 </b></p>
@@ -97,8 +94,8 @@ function Clients() {
             </p>
           </div>
         </div>
+        <Footer />
       </Layout>
-      <Footer />
     </div>
   );
 }

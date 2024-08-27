@@ -130,6 +130,7 @@ function Contact() {
       alert("An error occurred while submitting your details. Please try again.");
     }
   };
+  
 
   return (
     <>

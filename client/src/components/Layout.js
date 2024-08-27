@@ -18,7 +18,7 @@ function Layout({ children }) {
   return (
     <div className="flex flex-col min-screen">
       {/* Navigation bar */}
-      <header className="fixed bg-[#fff] h-25 w-full z-50 shadow-md">
+      <header className="fixed bg-[#fff] h-25 top-0 w-full z-50 shadow-md">
         <div className="flex w-full">
           {/* Logo and site name */}
           <div className="name-box flex ml-4 md:ml-10 justify-start align-middle mt-3 pt-2 md:mb-0 md:pt-0 md:ml-1 td:mb-0 td:ml-0 td:pl-0">
