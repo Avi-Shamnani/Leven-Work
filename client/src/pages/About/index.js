@@ -4,10 +4,9 @@ import ExpertLayout from "../../components/ExpertLayout";
 import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
 import "./about.css";
+import PopUpForm from "../Contact/PopUpForm";
 
 function About() {
-  
-
   return (
     <div className="about-page">
       <Layout />
@@ -19,14 +18,13 @@ function About() {
 
         <div className="para text-[backcolor] text-[20px] p-5 text-2xl justify-center align-middle text-center">
           <p>
-            We're <b className="text-[#0b7676] text-[28px]">Marketing Mavericks</b>, a fearless squad of creative
-            strategists redefining the marketing landscape. With a perfect blend
-            of artistry and analytics, we craft campaigns that captivate,
-            convert, and create lasting impact.
+            We're{" "}
+            <b className="text-[#0b7676] text-[28px]">Marketing Mavericks</b>, a
+            fearless squad of creative strategists redefining the marketing
+            landscape. With a perfect blend of artistry and analytics, we craft
+            campaigns that captivate, convert, and create lasting impact.
           </p>
           <br />
-
-          
         </div>
       </div>
 
@@ -85,7 +83,9 @@ function About() {
           </div>
         </details>
         <details>
-          <summary className="text-[#000]">How expert😎 we are at our work?</summary>
+          <summary className="text-[#000]">
+            How expert😎 we are at our work?
+          </summary>
           <div className="ml-10 pt-2">
             Totally <strong>Great!</strong> As Like the{" "}
             <strong>Panda Climbing Tree</strong>
@@ -121,6 +121,7 @@ function About() {
       </div>
 
       <Footer />
+      {/* <PopUpForm></PopUpForm> */}
     </div>
   );
 }
