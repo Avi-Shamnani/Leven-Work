@@ -1,12 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import Layout from "../../components/Layout";
-import ExpertLayout from "../../components/ExpertLayout";
 import Footer from "../../components/Footer";
-import { useNavigate } from "react-router-dom";
 import "./about.css";
 import PopUpForm from "../Contact/PopUpForm";
 
 function About() {
+  const [showPopUp, setShowPopUp] = useState(false);
+
+  useEffect(() => {
+    // Check if the popup has been shown before
+    const hasShownPopup = sessionStorage.getItem("hasShownPopup");
+
+    if (!hasShownPopup) {
+      // Show the popup after 10 seconds
+      const timer = setTimeout(() => {
+        setShowPopUp(true);
+      }, 10000);
+
+      return () => clearTimeout(timer); // Cleanup the timer on component unmount
+    }
+  }, []);
+
+  const handleClosePopUp = () => {
+    setShowPopUp(false);
+    sessionStorage.setItem("hasShownPopup", "true");
+  };
+
   return (
     <div className="about-page">
       <Layout />
@@ -106,7 +125,7 @@ function About() {
           <div className="ml-10">
             A BIG <strong>NOOOOOOOOO....</strong>
             <br />
-            Just take a <em>Chill Pill</em> Like this <em>Panda</em>😁 and rest
+            Just take a <em>Chill Pill</em> Like this <em>PANDA</em>😁 and rest
             we will <strong>MANAGE</strong>
             <br />
             <br />
@@ -121,7 +140,7 @@ function About() {
       </div>
 
       <Footer />
-      {/* <PopUpForm></PopUpForm> */}
+      {showPopUp && <PopUpForm onClose={handleClosePopUp} />}
     </div>
   );
 }
