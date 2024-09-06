@@ -68,11 +68,11 @@ function Contact() {
       setErrorMsg("");
     }
     setPhone(phoneNumber);
-    
+
     const allFieldsFilled = Object.values({
       ...formData,
-      phone: phoneNumber
-    }).every(value => value.trim() !== "");
+      phone: phoneNumber,
+    }).every((value) => value.trim() !== "");
 
     setIsFormComplete(allFieldsFilled && phoneNumber.length === 10);
   };
@@ -86,16 +86,16 @@ function Contact() {
     const allFieldsFilled = Object.values({
       ...formData,
       [e.target.name]: e.target.value,
-    }).every(value => value.trim() !== "");
+    }).every((value) => value.trim() !== "");
 
     setIsFormComplete(allFieldsFilled && phone.trim().length === 10);
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     const fullPhoneNumber = selectedCountryCode + phone;
-  
+
     try {
       const response = await fetch("/contact", {
         method: "POST",
@@ -107,7 +107,7 @@ function Contact() {
           phone: fullPhoneNumber,
         }),
       });
-  
+
       if (response.ok) {
         alert("Your details have been successfully submitted!");
         setFormData({
@@ -127,24 +127,29 @@ function Contact() {
       }
     } catch (error) {
       console.error("Error submitting form data:", error);
-      alert("An error occurred while submitting your details. Please try again.");
+      alert(
+        "An error occurred while submitting your details. Please try again."
+      );
     }
   };
-  
 
   return (
     <>
       <Layout>
-        <div className={`contact-page ${isFormComplete ? "completed-form" : ""}`}>
+        <div
+          className={`contact-page ${isFormComplete ? "completed-form" : ""}`}
+        >
           <section className="container bg-white">
             <header>Contact Us</header>
             <span className="close-btn" onClick={closeForm}>
               ×
             </span>
-            <form  onSubmit={handleSubmit} className="form">
+            <form onSubmit={handleSubmit} className="form">
               {/* Full Name */}
               <div className="input-box">
-                <label htmlFor="Name">Full Name <span>*</span></label>
+                <label htmlFor="Name">
+                  Full Name <span>*</span>
+                </label>
                 <input
                   type="text"
                   name="name"
@@ -157,7 +162,9 @@ function Contact() {
 
               {/* Email */}
               <div className="input-box">
-                <label htmlFor="Email">Email<span>*</span></label>
+                <label htmlFor="Email">
+                  Email<span>*</span>
+                </label>
                 <input
                   type="email"
                   name="email"
@@ -170,7 +177,9 @@ function Contact() {
 
               {/* Mobile Number */}
               <div className="input-box">
-                <label>Mobile Number<span>*</span></label>
+                <label>
+                  Mobile Number<span>*</span>
+                </label>
                 <div className="phone-input flex">
                   <select
                     id="country-code"
@@ -229,7 +238,6 @@ function Contact() {
                   value={formData.business}
                   onChange={handleInputChange}
                   placeholder="What Business do you have? (Optional)"
-                  
                 />
               </div>
 
@@ -243,12 +251,11 @@ function Contact() {
                   onChange={handleInputChange}
                   required
                 >
-                  <optgroup label="Services" >
-                    <option value="Digital Marketing">
-                      Digital Marketing
-                    </option>
+                  <optgroup label="Services">
+                    <option value="Digital Marketing">Digital Marketing</option>
                     <option value="Web Development">Web Development</option>
-                    <option value="App Development">App Development</option>
+                    <option value="Creative Services">Creative Services</option>
+                    <option value="Content Services">Content Services</option>
                   </optgroup>
                 </select>
               </div>
@@ -277,7 +284,9 @@ function Contact() {
                 ></textarea>
               </div>
               {/* Submit Button */}
-              <button className="btn" type="submit">Send Message</button>
+              <button className="btn" type="submit">
+                Send Message
+              </button>
             </form>
           </section>
         </div>

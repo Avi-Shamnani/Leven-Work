@@ -3,6 +3,7 @@ import "./footer1.css"; // Import the CSS file
 import logo from "./logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function Footer() {
   const [isFooterVisible, setIsFooterVisible] = useState(false);
@@ -34,7 +35,8 @@ function Footer() {
             <h2>Leven Work</h2>
             <br />
             <p className="footer-text">
-              Great job reaching the end of the page! You've just taken another big step towards unlocking the full potential of your business.
+              Great job reaching the end of the page! You've just taken another
+              big step towards unlocking the full potential of your business.
             </p>
           </div>
           <div className="footer-col">
@@ -47,11 +49,11 @@ function Footer() {
                 </li>
                 <li>
                   <ion-icon name="mail-outline"></ion-icon>
-                  <a href="mailto:info.levenwork@.online">
-                    Email: info.levenwork@.online
+                  <a href="mailto:info@levenwork.online">
+                    Email: info@levenwork.online
                   </a>
                   <br />
-                  <a href="mailto:hr@levenwork@.online">hr.levenwork@.online</a>
+                  <a href="mailto:hr@levenwork.online">hr@levenwork.online</a>
                 </li>
               </ul>
             </div>
@@ -59,11 +61,31 @@ function Footer() {
           <div className="footer-col">
             <h3>Links</h3>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Missions</a></li>
-              <li><a href="#">About</a></li>
-              <li><a href="#">Contact Us</a></li>
+              <li>
+                <Link to="/" className="footer-link">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link to="/home" className="footer-link">
+                  Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/team" className="footer-link">
+                  Team
+                </Link>
+              </li>
+              <li>
+                <Link to="/clients" className="footer-link">
+                  Clients
+                </Link>
+              </li>
+              <li>
+                <Link to="/contact" className="footer-link">
+                  Contact Us
+                </Link>
+              </li>
             </ul>
           </div>
           <div className="footer-col footer-social-icons-container">
@@ -71,7 +93,10 @@ function Footer() {
               <h3 className="mb-0 b-0">Social Media</h3>
               <ul>
                 <li>
-                  <a href="https://www.facebook.com/levenwork" title="Facebook">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61564663717373"
+                    title="Facebook"
+                  >
                     <ion-icon name="logo-facebook"></ion-icon>
                   </a>
                 </li>
@@ -101,7 +126,7 @@ function Footer() {
                 </li>
                 <li>
                   <a
-                    href="https://www.linkedin.com/in/leven-work"
+                    href="https://www.linkedin.com/company/levenwork/"
                     title="LinkedIn"
                   >
                     <ion-icon name="logo-linkedin"></ion-icon>
@@ -117,16 +142,13 @@ function Footer() {
           <br />
         </a>
         <a
-          className="bg-red-600 footer-whatsapp "
+          className="bg-red-600 footer-whatsapp"
           href="https://api.whatsapp.com/send?phone=918120665322&text=Hello"
         >
           <ion-icon name="logo-whatsapp" className="object-contain"></ion-icon>
         </a>
-        <a
-          className="bg-red-600 footer-call "
-           href="tel:+918120665322"
-        >
-<ion-icon name="call-outline" className="object-contain "></ion-icon>
+        <a className="bg-red-600 footer-call" href="tel:+918120665322">
+          <ion-icon name="call-outline" className="object-contain"></ion-icon>
         </a>
         <hr className="footer-hr" />
         <div className="footer-copyright">

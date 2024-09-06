@@ -95,7 +95,7 @@ h2 {
 #image-container:hover::after {
   content: attr(data-hover-text);
   position: absolute;
-  top: 50%;
+  top: 0%;
   left: 50%;
   transform: translate(-50%, -50%);
   background-color: #0b7676;

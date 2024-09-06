@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from './Colorful_Abstract_Infinity_Technology_Free_Logo-removebg-preview.png';
+import logo from "./Colorful_Abstract_Infinity_Technology_Free_Logo-removebg-preview.png";
 
 function Layout({ children }) {
   const location = useLocation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navItems = [
-    { title: "About Us", path: "/about", icon: "ri-information-line" },
-    { title: "Services", path: "/", icon: "ri-service-line" },
+    { title: "About Us", path: "/", icon: "ri-information-line" },
+    { title: "Services", path: "/home", icon: "ri-service-line" },
     { title: "Contact Us", path: "/contact", icon: "ri-user-star-fill" },
     { title: "Our Team", path: "/team", icon: "ri-team-line" },
     { title: "Clients", path: "/clients", icon: "ri-heart-2-line" },
@@ -28,7 +28,7 @@ function Layout({ children }) {
               alt="Leven-work"
             />
             <div className="text-xl md:text-3xl align-bottom text-[#000] flex pt-3 ml-3 md:ml-5">
-              <a href='/'>𝑳𝒆𝒗𝒆𝒏𝒘𝒐𝒓𝒌</a>
+              <Link to="/">𝑳𝒆𝒗𝒆𝒏𝒘𝒐𝒓𝒌</Link>
             </div>
           </div>
 
@@ -43,7 +43,10 @@ function Layout({ children }) {
           {/* Tablet and Mobile Navigation */}
           <nav className="hidden lg:flex w-full justify-end align-middle mt-0 pt-0 mb-2">
             {navItems.map((item, index) => (
-              <div key={index} className="flex flex-col justify-end align-middle">
+              <div
+                key={index}
+                className="flex flex-col justify-end align-middle"
+              >
                 {location.pathname === item.path && (
                   <div className="flex flex-col items-center">
                     <div className="h-5 w-10 text-black rounded-t-full"></div>
@@ -55,12 +58,16 @@ function Layout({ children }) {
                 <div
                   className={`px-7 py-2.5 text-black text-xl ${
                     index === 0 ? "rounded-l" : ""
-                  } ${index === navItems.length - 1 ? "rounded-r" : ""} flex items-center justify-center space-x-2`}
+                  } ${
+                    index === navItems.length - 1 ? "rounded-r" : ""
+                  } flex items-center justify-center space-x-2`}
                 >
                   {location.pathname !== item.path && (
                     <i className={`${item.icon} text-black text-xl`}></i>
                   )}
-                  <Link to={item.path} className="text-black">{item.title}</Link>
+                  <Link to={item.path} className="text-black">
+                    {item.title}
+                  </Link>
                 </div>
               </div>
             ))}
@@ -75,7 +82,9 @@ function Layout({ children }) {
                 key={index}
                 to={item.path}
                 className={`flex items-center px-4 py-2 text-black text-lg ${
-                  location.pathname === item.path ? "bg-gray-200 rounded-lg" : ""
+                  location.pathname === item.path
+                    ? "bg-gray-200 rounded-lg"
+                    : ""
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -88,9 +97,7 @@ function Layout({ children }) {
       </header>
 
       {/* Main Content */}
-      <main className="flex-1 pt-16">
-        {children}
-      </main>
+      <main className="flex-1 pt-16">{children}</main>
     </div>
   );
 }

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import './Popup_form.css'
 
 function PopUpForm({ onClose }) {
   const [formData, setFormData] = useState({
@@ -28,7 +29,7 @@ function PopUpForm({ onClose }) {
   };
 
   return (
-    <div className='fixed inset-0 bg-[#000] bg-opacity-30 backdrop-blur-sm flex justify-center items-center'>
+    <div className= 'fixed inset-0 bg-[#000] bg-opacity-30 backdrop-blur-sm flex justify-center items-center'>
       <div className='relative w-full max-w-md bg-white p-6 rounded-lg shadow-lg mx-4'>
         <button 
           className='absolute top-2 right-2 text-xl font-bold text-gray-700 hover:text-gray-900'

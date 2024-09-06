@@ -36,10 +36,13 @@ app.post("/contact", async (req, res) => {
   }
 });
 
-mongoose.connect("mongodb://localhost:27017/levenwork", {
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-});
+mongoose.connect(
+  "mongodb+srv://adswithindia:u4kAJ%DDjHXn7ad@cluster0.ixb9m.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
+);
 
 // Define the user schema (optional if it's already defined in client.model.js)
 const userSchema = new mongoose.Schema({

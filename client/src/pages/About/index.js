@@ -15,7 +15,7 @@ function About() {
       // Show the popup after 10 seconds
       const timer = setTimeout(() => {
         setShowPopUp(true);
-      }, 10000);
+      }, 5000);
 
       return () => clearTimeout(timer); // Cleanup the timer on component unmount
     }
