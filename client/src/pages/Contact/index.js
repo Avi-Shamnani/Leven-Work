@@ -3,6 +3,7 @@ import Layout from "../../components/Layout";
 import Footer from "../../components/Footer";
 import { useNavigate } from "react-router-dom";
 import "./Contact.css";
+import axios from "axios";
 
 function Contact() {
   const [countries, setCountries] = useState([]);
@@ -97,18 +98,17 @@ function Contact() {
     const fullPhoneNumber = selectedCountryCode + phone;
 
     try {
-      const response = await fetch("/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          ...formData,
-          phone: fullPhoneNumber,
-        }),
+      const response = await axios.post("http://localhost:8000/contact", {
+        name: formData.name,
+        email: formData.email,
+        phone: fullPhoneNumber,
+        business: formData.business,
+        services: formData.services,
+        location: formData.location,
+        description: formData.description,
       });
-
-      if (response.ok) {
+      // console.log(response);
+      if (response.data.success) {
         alert("Your details have been successfully submitted!");
         setFormData({
           name: "",

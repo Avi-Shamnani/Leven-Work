@@ -6,7 +6,7 @@ import { faArrowUp } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
 
 function Footer() {
-  const [isFooterVisible, setIsFooterVisible] = useState(false);
+  // const [isFooterVisible, setIsFooterVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,8 +14,8 @@ function Footer() {
       const pageHeight = document.documentElement.scrollHeight;
       const clientHeight = document.documentElement.clientHeight;
 
-      setIsFooterVisible(scrollPosition + clientHeight >= pageHeight);
-      console.log("isFooterVisible:", isFooterVisible);
+      // setIsFooterVisible(scrollPosition + clientHeight >= pageHeight);
+      // console.log("isFooterVisible:", isFooterVisible);
     };
     window.addEventListener("scroll", handleScroll);
 
