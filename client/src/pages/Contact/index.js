@@ -98,15 +98,18 @@ function Contact() {
     const fullPhoneNumber = selectedCountryCode + phone;
 
     try {
-      const response = await axios.post("http://localhost:8000/contact", {
-        name: formData.name,
-        email: formData.email,
-        phone: fullPhoneNumber,
-        business: formData.business,
-        services: formData.services,
-        location: formData.location,
-        description: formData.description,
-      });
+      const response = await axios.post(
+        "https://leven-work-working.onrender.com/contact",
+        {
+          name: formData.name,
+          email: formData.email,
+          phone: fullPhoneNumber,
+          business: formData.business,
+          services: formData.services,
+          location: formData.location,
+          description: formData.description,
+        }
+      );
       // console.log(response);
       if (response.data.success) {
         alert("Your details have been successfully submitted!");
